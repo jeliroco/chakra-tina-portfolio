@@ -1,28 +1,21 @@
-import Link from 'next/link'
-import Head from 'next/head'
+// import from Next
+import Head from "next/head";
+
+//import custom components
+import { Footer } from "./Footer.js";
+import { Header } from "./Header.js";
 
 export const Layout = (props) => {
   return (
-    <div
-      style={{
-        margin: '3rem',
-      }}
-    >
+    <div>
       <Head>
-        <title>Tina App</title>
-        <meta name="description" content="A TinaCMS Application" />
+        <title>jeliroco</title>
+        <meta name="description" content="jeliroco portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        {' | '}
-        <Link href="/posts">
-          <a>Posts</a>
-        </Link>
-      </header>
+      <Header />
       <main>{props.children}</main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
