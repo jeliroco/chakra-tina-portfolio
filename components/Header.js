@@ -2,12 +2,16 @@
 import NextLink from "next/link";
 
 // import from Chakra
-import { Box, Link, HStack } from "@chakra-ui/react";
+import { useStyleConfig, Box, Link, HStack } from "@chakra-ui/react";
 
 export const Header = (props) => {
+  const { variant, ...rest } = props;
+
+  const styles = useStyleConfig("Header", { variant });
+
   return (
     <header>
-      <Box p={3}>
+      <Box __css={styles} {...rest}>
         <HStack>
           <NextLink href="/" passHref>
             <Link>Home</Link>

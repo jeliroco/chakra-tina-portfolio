@@ -1,16 +1,15 @@
 // import from Chakra
 import { useStyleConfig, Box } from "@chakra-ui/react";
 
-export const Footer = (props) => {
+export const Main = (props) => {
   const { variant, ...rest } = props;
 
-  const styles = useStyleConfig("Footer", { variant });
-
+  const styles = useStyleConfig("Main", { variant });
   return (
-    <footer>
+    <main>
       <Box __css={styles} {...rest}>
-        I am the footer!
+        {props.children}
       </Box>
-    </footer>
+    </main>
   );
 };
