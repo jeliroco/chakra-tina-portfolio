@@ -1,5 +1,5 @@
 // import from Chakra
-import { useStyleConfig, Box } from "@chakra-ui/react";
+import { useStyleConfig, useColorModeValue, Box } from "@chakra-ui/react";
 import { StyleBox } from "./StyleBox.js";
 import { ThemeContext } from "../theme/context";
 import { useContext } from "react";
@@ -22,9 +22,8 @@ export const Main = (props) => {
               pos="absolute"
               right="3"
               top="3"
-
               borderRadius="100"
-              bg="neutral.100"
+              bg={useColorModeValue("neutral.100", "neutral.900")}
               borderColor={`${context.colorScheme}.600`}
             ></StyleBox>
             <StyleBox
@@ -34,24 +33,21 @@ export const Main = (props) => {
               left="3"
               top="3"
               borderRadius="100"
-              bg="neutral.100"
+              bg={useColorModeValue("neutral.100", "neutral.900")}
               borderColor={`${context.colorScheme}.600`}
             ></StyleBox>
-
-            {
-              <StyleBox
-                display={["none", "none", "block"]}
-                w="10"
-                h="10"
-                pos="absolute"
-                left="50%"
-                transform="translateX(-50%)"
-                top="3"
-                borderRadius="100"
-                bg="neutral.100"
-                borderColor={`${context.colorScheme}.600`}
-              ></StyleBox>
-            }
+            <StyleBox
+              display={["none", "none", "block"]}
+              w="10"
+              h="10"
+              pos="absolute"
+              left="50%"
+              transform="translateX(-50%)"
+              top="3"
+              borderRadius="100"
+              bg={useColorModeValue("neutral.100","neutral.900")}
+              borderColor={`${context.colorScheme}.600`}
+            ></StyleBox>
 
             <StyleBox
               w="6"
