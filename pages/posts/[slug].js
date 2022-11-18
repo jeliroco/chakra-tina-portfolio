@@ -1,18 +1,24 @@
 import { Layout } from "../../components/Layout";
 import { useTina } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { ColorModeScript } from "@chakra-ui/react";
+
 import { client } from "../../.tina/__generated__/client";
-import NextLink from "next/link";
+
+import { CustomLink } from "../../components/CustomLink";
+
 import {
+  useMultiStyleConfig,
   Button,
   Box,
-  Link,
+  Code,
+  Container,
+  Center,
   HStack,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanels,
-  TabPanel,
+  Flex,
+  Heading,
   Icon,
+  Image,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -22,67 +28,164 @@ import {
   PopoverArrow,
   PopoverCloseButton,
   PopoverAnchor,
+  Spacer,
+  Tabs,
+  Tab,
+  TabList,
+  TabPanels,
+  TabPanel,
+  Text,
 } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import { RiFileTextLine, RiFileCodeLine } from "react-icons/ri";
+import {
+  RiArrowLeftLine,
+  RiFileTextLine,
+  RiFileCodeLine,
+} from "react-icons/ri";
+import { PostDate } from "../../components/PostDate";
 
-export default function Home(props) {
+export default function Post(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
-  const { data } = useTina({
+  const { data, isLoading } = useTina({
     query: props.query,
     variables: props.variables,
     data: props.data,
   });
 
+  const styles = useMultiStyleConfig("Tabs");
+
+  const components = {
+    a: (props) => {
+      return (
+        <CustomLink href={props?.href ?? "/"}>{props?.children}</CustomLink>
+      );
+    },
+    img: (props) => {
+      return (
+        <Container width="100%" maxWidth="768px" p="6">
+          <Image src={props?.url} />
+          <Center>
+            <Text>{props.caption}</Text>
+          </Center>
+        </Container>
+      );
+    },
+    h1: (props) => {
+      return (
+        <Heading as="h1" size="xl">
+          {props.children}
+        </Heading>
+      );
+    },
+    h2: (props) => {
+      return (
+        <Heading as="h2" size="lg">
+          {props.children}
+        </Heading>
+      );
+    },
+    h3: (props) => {
+      return (
+        <Heading as="h3" size="md">
+          {props.children}
+        </Heading>
+      );
+    },
+    h4: (props) => {
+      return (
+        <Heading as="h4" size="sm">
+          {props.children}
+        </Heading>
+      );
+    },
+    h5: (props) => {
+      return (
+        <Heading as="h5" size="xs">
+          {props.children}
+        </Heading>
+      );
+    },
+    h6: (props) => {
+      return (
+        <Heading as="h6" size="xs" fontStyle="italic">
+          {props.children}
+        </Heading>
+      );
+    },
+    p: (props) => {
+      return <Text pb="2">{props.children}</Text>;
+    },
+    code: (props) => {
+      return (
+        <Code pb="2">
+          <pre>{props.children}</pre>
+        </Code>
+      );
+    },
+  };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Layout>
-      <Tabs variant="soft-rounded">
+      <PostDate createdAt={data.post.metadata.createdAt} editedAt={data.post.metadata.editedAt} />
+      <Tabs>
         <TabList>
-          <HStack mb="2">
-            <NextLink href="/" passHref>
-              <Link>
-                <Button colorScheme="blackAlpha">
-                  <ArrowBackIcon w={4} h={4} />
-                  Posts
-                </Button>
-              </Link>
-            </NextLink>
-            <Popover trigger="hover" openDelay="500" placement="top">
+          <Flex w="100%" gap="2">
+            <Heading as="h1" size={["sm","xl"]}>{data.post.title}</Heading>
+            <Spacer />
+            <Popover
+              trigger="hover"
+              openDelay="500"
+              placement="top"
+              gutter="2"
+            >
               <PopoverTrigger>
                 <Tab>
-                  <Icon as={RiFileTextLine} w={8} h={8} />
+                  <Icon as={RiFileTextLine} w={6} h={6} />
                 </Tab>
               </PopoverTrigger>
-              <PopoverContent width="100px">
+              <PopoverContent>
                 <PopoverBody fontSize="12px" textAlign="center">
-                  View Post
+                  View Styled Post
                 </PopoverBody>
               </PopoverContent>
             </Popover>
-            <Popover trigger="hover" openDelay="500" placement="top">
+            <Popover
+              trigger="hover"
+              openDelay="500"
+              placement="top"
+              gutter="2"
+            >
               <PopoverTrigger>
                 <Tab>
-                  <Icon as={RiFileCodeLine} w={8} h={8} placement="top" />
+                  <Icon as={RiFileCodeLine} w={6} h={6} />
                 </Tab>
               </PopoverTrigger>
-              <PopoverContent width="100px">
+              <PopoverContent>
                 <PopoverBody fontSize="12px" textAlign="center">
-                  View Code
+                  View Raw Data
                 </PopoverBody>
               </PopoverContent>
             </Popover>
-          </HStack>
+          </Flex>
         </TabList>
 
         <TabPanels>
           <TabPanel>
-            <p>one!</p>
+            <Box p="2">
+              <TinaMarkdown content={data.post.body} components={components} />
+            </Box>
           </TabPanel>
           <TabPanel>
-            <Box bg="gray.400" borderRadius="8" p="3">
-              <code>
-                <pre>{JSON.stringify(data.post, null, 2)}</pre>
-              </code>
+            <Box p="2">
+              <Code bg="transparent">
+                <pre style={{ whiteSpace: "pre-wrap" }}>
+                  {JSON.stringify(data.post, null, 2)}
+                </pre>
+              </Code>
             </Box>
           </TabPanel>
         </TabPanels>

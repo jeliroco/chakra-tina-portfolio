@@ -1,8 +1,7 @@
 // import from Next
-import NextLink from "next/link";
-
+import { CustomLink } from "./CustomLink";
 // import from Chakra
-import { useStyleConfig, Box, Link, HStack } from "@chakra-ui/react";
+import { useStyleConfig, Box, HStack } from "@chakra-ui/react";
 
 export const Header = (props) => {
   const { variant, ...rest } = props;
@@ -12,16 +11,10 @@ export const Header = (props) => {
   return (
     <header>
       <Box __css={styles} {...rest}>
-        <HStack>
-          <NextLink href="/" passHref>
-            <Link>Home</Link>
-          </NextLink>
-          <NextLink href="/about" passHref>
-            <Link>About</Link>
-          </NextLink>
-          <NextLink href="/posts" passHref>
-            <Link>Posts</Link>
-          </NextLink>
+        <HStack gap="4">
+          <CustomLink href="/">jeliroco..</CustomLink>
+          <CustomLink href="/about">about..</CustomLink>
+          <CustomLink href="/posts">posts..</CustomLink>
         </HStack>
       </Box>
     </header>

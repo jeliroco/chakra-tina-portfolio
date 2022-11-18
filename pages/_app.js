@@ -1,18 +1,13 @@
-// import from react
-import React from "react";
-// import from chakra
-import { ChakraProvider, Box } from "@chakra-ui/react";
-// import from custom
-import { theme } from "../config/theme.js";
+// setup your wrapper in the _app file (e.g: pages/_app.js)
+import { Chakra } from "../src/Chakra";
 
-const App = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
-      <Box minHeight="100vh">
-        <Component {...pageProps} />
-      </Box>
-    </ChakraProvider>
+    <Chakra cookies={pageProps.cookies}>
+      <Component {...pageProps} />
+    </Chakra>
   );
-};
+}
 
-export default App;
+// re-export the reusable `getServerSideProps` function
+export { getServerSideProps } from "../src/Chakra";

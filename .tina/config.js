@@ -1,6 +1,6 @@
-import { defineStaticConfig } from "tinacms";
+import { defineSchema, defineConfig } from "tinacms";
 
-const schema = {
+const schema = defineSchema({
   config: {
     clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
     branch:
@@ -49,13 +49,73 @@ const schema = {
           name: "title",
         },
         {
-          type: "string",
+          label: "Metadata",
+          name: "metadata",
+          type: "object",
+          fields: [
+            {
+              label: "Created At",
+              name: "createdAt",
+              type: "datetime",
+              ui: {
+                dateFormat: "YYYY.MM.DD @h:mma",
+              },
+            },
+            {
+              label: "Edited At",
+              name: "editedAt",
+              type: "datetime",
+              ui: {
+                dateFormat: "YYYY.MM.DD @h:mma",
+              },
+            },
+          ],
+        },
+        {
+          label: "Tags",
+          name: "tags",
+          type: "object",
+          list: true,
+          ui: {
+            // This allows the customization of the list item UI
+            // Data can be accessed by item?.<Name of field>
+            itemProps: (item) => {
+              return { label: item?.tag };
+            },
+            // Setting a default will auto-populate new items with the given values
+            defaultItem: {
+              tag: "tag",
+            },
+          },
+          fields: [
+            {
+              type: "string",
+              label: "Tag",
+              name: "tag",
+            },
+          ],
+        },
+        {
           label: "Blog Post Body",
           name: "body",
           isBody: true,
-          ui: {
-            component: "textarea",
-          },
+          // ui: {
+          //   component: "textarea",
+          // },
+          type: "rich-text",
+          templates: [
+            // {
+            //   name: "Callout",
+            //   label: "Callout",
+            //   fields: [
+            //     {
+            //       name: "message",
+            //       label: "Message",
+            //       type: "string",
+            //     },
+            //   ],
+            // },
+          ],
         },
       ],
       ui: {
@@ -65,9 +125,9 @@ const schema = {
       },
     },
   ],
-};
+});
 
-export const config = defineStaticConfig({
+export const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   branch:
     process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
@@ -93,4 +153,4 @@ export const config = defineStaticConfig({
   schema,
 });
 
-export default config
+export default config;

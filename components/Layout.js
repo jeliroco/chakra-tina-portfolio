@@ -14,9 +14,9 @@ export const Layout = (props) => {
         <meta name="description" content="jeliroco portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header variant="fixed"/>
-      <Main variant="fixed" children={props.children}></Main>
-      <Footer variant="fixed" />
+      <Header/>
+      <Main children={props.children}></Main>
+      <Footer />
     </div>
   );
 };
