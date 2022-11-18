@@ -3,60 +3,85 @@ import {
   useStyleConfig,
   useColorMode,
   Box,
-  Button,
   IconButton,
   Icon,
   Popover,
   PopoverTrigger,
   PopoverContent,
-  PopoverHeader,
   PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
+  HStack,
+  Spacer,
+  Text,
 } from "@chakra-ui/react";
+import { useContext } from "react";
+
+import { ThemeContext } from "../theme/context";
 
 import { RiLightbulbFlashFill, RiLightbulbLine } from "react-icons/ri";
+import { colors } from "../theme/color";
+
+import { RiCheckboxCircleLine } from "react-icons/ri";
+import { SimplePopover } from "./SimplePopover";
 
 export const Footer = (props) => {
   const { variant, ...rest } = props;
 
   const styles = useStyleConfig("Footer", { variant });
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const context = useContext(ThemeContext);
   return (
     <footer>
       <Box __css={styles} {...rest}>
-        <Popover
-          trigger="hover"
-          openDelay="500"
-          placement="top-start"
-          gutter="2"
-        >
-          <PopoverTrigger>
-            <IconButton
-              aria-label="Toggle Color Mode"
-              onClick={toggleColorMode}
-              icon={
-                <Icon
-                  as={
-                    colorMode == "light"
-                      ? RiLightbulbFlashFill
-                      : RiLightbulbLine
-                  }
-                  w={6}
-                  h={6}
-                />
-              }
-            />
-          </PopoverTrigger>
-          <PopoverContent>
-            <PopoverBody fontSize="12px" textAlign="center">
-              {colorMode == "light" ? "Enable Dark Mode" : "Enable Light Mode"}
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+        <HStack>
+          <SimplePopover
+            trigger="hover"
+            placecment="top-right"
+            triggerContent={
+              <IconButton
+                aria-label="Toggle Color Mode"
+                onClick={toggleColorMode}
+                icon={
+                  <Icon
+                    as={
+                      colorMode == "light"
+                        ? RiLightbulbFlashFill
+                        : RiLightbulbLine
+                    }
+                    w={6}
+                    h={6}
+                  />
+                }
+              />
+            }
+            bodyContent={
+              <Text>
+                {colorMode == "light"
+                  ? "Enable Dark Mode"
+                  : "Enable Light Mode"}
+              </Text>
+            }
+          />
+
+          {colorMode == "light" ? "Enable Dark Mode" : "Enable Light Mode"}
+          <Spacer />
+          {colors.map(function (color) {
+            return (
+              <IconButton
+                colorScheme={color}
+                active={color == context.setColorScheme}
+                aria-label="Toggle Color Palette"
+                onClick={() => context.setColorScheme(color)}
+                icon={
+                  color == context.colorScheme ? (
+                    <Icon as={RiCheckboxCircleLine} w={6} h={6} />
+                  ) : (
+                    <></>
+                  )
+                }
+              />
+            );
+          })}
+        </HStack>
       </Box>
     </footer>
   );

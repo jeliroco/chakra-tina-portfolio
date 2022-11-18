@@ -6759,7 +6759,7 @@ lodash@^4.0.1, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.2
 
 log4js@^6.4.0:
   version "6.7.0"
-  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.7.0.tgz#fff671a74b2f6e956d135c3c756c79072809a23b"
+  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.7.0.tgzneutral.100671a74b2f6e956d135c3c756c79072809a23b"
   integrity sha512-KA0W9ffgNBLDj6fZCq/lRbgR6ABAodRIDHrZnS48vOtfKa4PzWImb0Md1lmGCdO3n3sbCm/n1/WmrNlZ8kCI3Q==
   dependencies:
     date-format "^4.0.14"

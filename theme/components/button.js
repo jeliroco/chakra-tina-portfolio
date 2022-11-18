@@ -1,5 +1,6 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
 import { mode } from "@chakra-ui/theme-tools"; // import utility for setting light and dark mode props
+import { config } from "../config";
 
 const baseStyle = defineStyle({
   fontWeight: "normal", // change the font weight to normal
@@ -17,7 +18,7 @@ const neoBrutalistVariant = defineStyle((props) => {
     fontFamily: "mono",
     fontWeight: "bold",
     bg: mode(`${c}.300`, `${c}.600`)(props),
-    color: mode("#fff", "gray.800")(props),
+    color: mode("neutral.100", "gray.800")(props),
     border: "2px solid",
     borderColor: mode("black", "white")(props),
     transition: "transform 0.15s ease-out, background 0.15s ease-out",
@@ -34,14 +35,13 @@ const neoBrutalistVariant = defineStyle((props) => {
   };
 });
 
-export const buttonTheme = defineStyleConfig({
-  baseStyle,
-  sizes,
-  variants: {
-    "neo-brutalist": neoBrutalistVariant,
-  },
-  defaultProps: {
-    variant: "neo-brutalist",
-    colorScheme: "blue", // set the default color scheme to purple
-  },
-});
+export const getButtonTheme = (themeConfig) => {
+  return defineStyleConfig({
+    baseStyle,
+    sizes,
+    variants: {
+      "neo-brutalist": neoBrutalistVariant,
+    },
+    defaultProps: themeConfig,
+  });
+};

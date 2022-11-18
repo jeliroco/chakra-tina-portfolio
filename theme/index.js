@@ -1,40 +1,35 @@
 import { defineStyleConfig, extendTheme, useColorMode } from "@chakra-ui/react";
-import { popoverTheme } from "./components/popover";
-import { tabsTheme } from "./components/tabs";
-import { buttonTheme } from "./components/button";
-import { headerTheme } from "./components/header";
-import { footerTheme } from "./components/footer";
-import { mainTheme } from "./components/main";
-import { styleBoxTheme } from "./components/styleBox";
+import { getPopoverTheme } from "./components/popover";
+import { getTabsTheme } from "./components/tabs";
+import { getButtonTheme } from "./components/button";
+import { getHeaderTheme } from "./components/header";
+import { getFooterTheme } from "./components/footer";
+import { getMainTheme } from "./components/main";
+import { getStyleBoxTheme } from "./components/styleBox";
 import { globalTheme } from "./global";
+import { themeColors } from "./color";
 
 const config = {
   initialColorMode: "light",
   useSystemColorMode: false,
 };
 
-// 2. Extend the theme to include custom colors, fonts, etc
-const colors = {
-  brand: {
-    900: "#1a365d",
-    800: "#153e75",
-    700: "#2a69ac",
-  },
+const getTheme = (themeConfig) => {
+  return extendTheme({
+    config,
+    colors: themeColors,
+    styles: { global: globalTheme },
+
+    components: {
+      Header: getHeaderTheme(themeConfig),
+      Footer: getFooterTheme(themeConfig),
+      MainContent: getMainTheme(themeConfig),
+      Tabs: getTabsTheme(themeConfig),
+      Popover: getPopoverTheme(themeConfig),
+      Button: getButtonTheme(themeConfig),
+      StyleBox: getStyleBoxTheme(themeConfig),
+    },
+  });
 };
 
-const theme = extendTheme({
-  config,
-  colors,
-  styles: { global: globalTheme },
-  components: {
-    Header: headerTheme,
-    Footer: footerTheme,
-    MainContent: mainTheme,
-    Tabs: tabsTheme,
-    Popover: popoverTheme,
-    Button: buttonTheme,
-    StyleBox: styleBoxTheme,
-  },
-});
-
-export { theme };
+export { getTheme };
