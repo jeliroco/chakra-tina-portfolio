@@ -7,9 +7,22 @@ import {
 } from "@chakra-ui/react";
 
 export const SimplePopover = (props) => {
-  const { triggerContent, bodyContent, trigger, ...rest } = props;
+  const {
+    triggerContent,
+    bodyContent,
+    trigger,
+    placement,
+    openDelay,
+    ...rest
+  } = props;
   return (
-    <Popover trigger={trigger} {...rest} openDelay="500" placement="top" gutter="2">
+    <Popover
+      trigger={trigger}
+      placement={placement}
+      {...rest}
+      openDelay={openDelay}
+      gutter="2"
+    >
       <PopoverTrigger>{triggerContent}</PopoverTrigger>
       <PopoverContent>
         <PopoverBody fontSize="12px" textAlign="center">

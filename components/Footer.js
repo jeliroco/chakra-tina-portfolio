@@ -12,16 +12,23 @@ import {
   HStack,
   Spacer,
   Text,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import { useContext } from "react";
 
 import { ThemeContext } from "../theme/context";
 
-import { RiLightbulbFlashFill, RiLightbulbLine } from "react-icons/ri";
+import {
+  RiCheckboxCircleLine,
+  RiLightbulbFlashFill,
+  RiLightbulbLine,
+  RiPaletteLine,
+} from "react-icons/ri";
 import { colors } from "../theme/color";
 
-import { RiCheckboxCircleLine } from "react-icons/ri";
 import { SimplePopover } from "./SimplePopover";
+import { mode } from "@chakra-ui/theme-tools";
 
 export const Footer = (props) => {
   const { variant, ...rest } = props;
@@ -35,7 +42,7 @@ export const Footer = (props) => {
         <HStack>
           <SimplePopover
             trigger="hover"
-            placecment="top-right"
+            placement="top-end"
             triggerContent={
               <IconButton
                 aria-label="Toggle Color Mode"
@@ -47,6 +54,7 @@ export const Footer = (props) => {
                         ? RiLightbulbFlashFill
                         : RiLightbulbLine
                     }
+                    color={colorMode == "light" ? "white" : "black"}
                     w={6}
                     h={6}
                   />
@@ -63,24 +71,54 @@ export const Footer = (props) => {
           />
 
           {colorMode == "light" ? "Enable Dark Mode" : "Enable Light Mode"}
-          <Spacer />
-          {colors.map(function (color) {
-            return (
+          <SimplePopover
+            colorScheme={context.colorScheme}
+            trigger="hover"
+            placement="top-end"
+            triggerContent={
               <IconButton
-                colorScheme={color}
-                active={color == context.setColorScheme}
-                aria-label="Toggle Color Palette"
-                onClick={() => context.setColorScheme(color)}
-                icon={
-                  color == context.colorScheme ? (
-                    <Icon as={RiCheckboxCircleLine} w={6} h={6} />
-                  ) : (
-                    <></>
-                  )
-                }
+                colorScheme={context.colorScheme}
+                aria-label="Color Palette"
+                icon={<Icon as={RiPaletteLine} w={6} h={6} />}
               />
-            );
-          })}
+            }
+            bodyContent={
+              <Grid gap={2} templateColumns={["repeat(5,1fr)", ""]}>
+                {colors.map(function (color) {
+                  return (
+                    <GridItem key={color}>
+                      <SimplePopover
+                        colorScheme={`${color}`}
+                        trigger="hover"
+                        placement="top"
+                        triggerContent={
+                          <IconButton
+                            key={color}
+                            colorScheme={color}
+                            aria-label="Toggle Color Palette"
+                            onClick={() => context.setColorScheme(color)}
+                            icon={
+                              color == context.colorScheme ? (
+                                <Icon as={RiCheckboxCircleLine} w={6} h={6} />
+                              ) : (
+                                <></>
+                              )
+                            }
+                          />
+                        }
+                        bodyContent={
+                          <Text>
+                            {color[0].toUpperCase() + color.substring(1)} Color
+                            Scheme
+                          </Text>
+                        }
+                      />
+                    </GridItem>
+                  );
+                })}
+              </Grid>
+            }
+          />
         </HStack>
       </Box>
     </footer>

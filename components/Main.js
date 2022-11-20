@@ -1,5 +1,10 @@
 // import from Chakra
-import { useStyleConfig, useColorModeValue, Box } from "@chakra-ui/react";
+import {
+  useStyleConfig,
+  useColorModeValue,
+  Box,
+  Collapse,
+} from "@chakra-ui/react";
 import { StyleBox } from "./StyleBox.js";
 import { ThemeContext } from "../theme/context";
 import { useContext } from "react";

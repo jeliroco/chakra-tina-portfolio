@@ -1,5 +1,6 @@
 ---
 title: 'Hello, World!'
+thumbnail: /uploads/AZU-2211556_Concept2.png
 metadata:
   createdAt: '2022-11-15T17:00:00.000Z'
   editedAt: '2022-11-17T23:10:00.000Z'

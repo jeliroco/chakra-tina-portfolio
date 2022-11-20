@@ -1,14 +1,16 @@
 import {
+  Button,
   Code,
   Container,
   Center,
   Heading,
   Image,
-
   Text,
+  Box,
 } from "@chakra-ui/react";
 
 import { CustomLink } from "./CustomLink";
+import { RandomText } from "./RandomText";
 
 export const components = {
   a: (props) => {
@@ -67,13 +69,35 @@ export const components = {
     );
   },
   p: (props) => {
-    return <Text pb="2">{props.children}</Text>;
+    return (
+      <Text m="0 !important" p="0 !important">
+        {props.children}
+      </Text>
+    );
   },
   code: (props) => {
     return (
       <Code pb="2">
         <pre>{props.children}</pre>
       </Code>
+    );
+  },
+  RandomText: (props) => {
+    return (
+      <RandomText
+        textArray={props?.text}
+        bold={props?.bold}
+        italic={props?.italic}
+      />
+    );
+  },
+  Button: (props) => {
+    return (
+      <Box>
+        <Button >
+          <CustomLink href={props?.href ?? "/"}>{props?.text}</CustomLink>
+        </Button>
+      </Box>
     );
   },
 };

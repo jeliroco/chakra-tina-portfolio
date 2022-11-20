@@ -18,7 +18,7 @@ const neoBrutalistVariant = defineStyle((props) => {
     fontFamily: "mono",
     fontWeight: "bold",
     bg: mode(`${c}.300`, `${c}.600`)(props),
-    color: mode("neutral.100", "gray.800")(props),
+    color: mode("black", "white")(props),
     border: "2px solid",
     borderColor: mode("black", "white")(props),
     transition: "transform 0.15s ease-out, background 0.15s ease-out",

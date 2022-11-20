@@ -8,6 +8,7 @@ import { getMainTheme } from "./components/main";
 import { getStyleBoxTheme } from "./components/styleBox";
 import { globalTheme } from "./global";
 import { themeColors } from "./color";
+import { getShadows } from "./shadow";
 
 const config = {
   initialColorMode: "light",
@@ -18,8 +19,9 @@ const getTheme = (themeConfig) => {
   return extendTheme({
     config,
     colors: themeColors,
+    fonts: {},
     styles: { global: globalTheme },
-
+    shadows: getShadows(themeConfig),
     components: {
       Header: getHeaderTheme(themeConfig),
       Footer: getFooterTheme(themeConfig),

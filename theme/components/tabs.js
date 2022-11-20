@@ -36,19 +36,20 @@ const neoBrutalistVariant = definePartsStyle((props) => {
 
   return {
     tab: {
-      bg: mode("neutral.100", "neutral.900")(props),
+      bg: mode(`${c}.300`, `${c}.600`)(props),
       color: mode(`${c}.400`, `${c}.400`)(props),
       border: "2px solid",
-      borderColor: mode("black", "white")(props),
+      borderColor: mode(`${c}.400`, `${c}.400`)(props),
       transition: "transform 0.15s ease-out, background 0.15s ease-out",
       _hover: {
         transform: "scale(1.05, 1.05)",
-        bg: mode(`${c}.100`, `${c}.900`)(props),
+        bg: mode(`${c}.300`, `${c}.300`)(props),
       },
       _selected: {
         transform: "scale(1, 1)",
-        bg: mode(`${c}.500`, `${c}.500`)(props),
-        color: mode("neutral.100", "gray.800")(props),
+        bg: mode(`${c}.100`, `${c}.100`)(props),
+        color: mode(`${c}.500`, `${c}.500`)(props),
+        borderColor: mode(`${c}.500`, `${c}.500`)(props),
       },
     },
     tablist: {

@@ -1,5 +1,48 @@
 import { defineSchema, defineConfig } from "tinacms";
 
+const customTemplates = [
+  {
+    name: "Button",
+    label: "Button",
+    type: "object",
+    fields: [
+      {
+        name: "text",
+        label: "Text",
+        type: "string",
+      },
+      {
+        name: "href",
+        label: "URL",
+        type: "string",
+      },
+    ],
+  },
+  {
+    name: "RandomText",
+    label: "Random Text",
+    type: "object",
+    fields: [
+      {
+        name: "bold",
+        label: "Bold",
+        type: "boolean",
+      },
+      {
+        name: "italic",
+        label: "Italic",
+        type: "boolean",
+      },
+      {
+        name: "text",
+        label: "Text",
+        type: "string",
+        list: true,
+      },
+    ],
+  },
+];
+
 const schema = defineSchema({
   config: {
     clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -23,10 +66,207 @@ const schema = defineSchema({
       format: "mdx",
       fields: [
         {
-          name: "body",
-          label: "Main Content",
-          type: "rich-text",
-          isBody: true,
+          label: "Title",
+          name: "title",
+          type: "string",
+        },
+        {
+          label: "Page Blocks",
+          name: "blocks",
+          type: "object",
+          list: true,
+          templates: [
+            {
+              label: "Content Area",
+              name: "contentArea",
+              fields: [
+                {
+                  label: "Content",
+                  name: "content",
+                  type: "rich-text",
+                  templates: [],
+                },
+              ],
+            },
+            {
+              label: "Hero Image",
+              name: "heroImage",
+              fields: [
+                {
+                  label: "Image",
+                  name: "image",
+                  type: "image",
+                  templates: [],
+                },
+                {
+                  label: "Image Style",
+                  name: "imageStyle",
+                  type: "object",
+                  fields: [
+                    {
+                      label: "Filter",
+                      name: "filter",
+                      type: "string",
+                      templates: [],
+                    },
+                    {
+                      label: "Apply Theme Filter?",
+                      name: "applyThemeFilter",
+                      type: "boolean",
+                      templates: [],
+                    },
+                    {
+                      label: "Image Crop",
+                      name: "crop",
+                      type: "object",
+                      fields: [
+                        {
+                          label: "Image Fit",
+                          name: "fit",
+                          type: "string",
+                        },
+                        {
+                          label: "Image Position",
+                          name: "position",
+                          type: "string",
+                        },
+                      ],
+                    },
+                    {
+                      label: "Image Size",
+                      name: "size",
+                      type: "object",
+                      fields: [
+                        {
+                          label: "Height",
+                          name: "height",
+                          type: "number",
+                          ui: {
+                            validate: (val) => {
+                              if (val < 0) {
+                                return "N >= 0";
+                              }
+                            },
+                          },
+                        },
+                        {
+                          label: "Width",
+                          name: "width",
+                          type: "number",
+                          ui: {
+                            validate: (val) => {
+                              if (val < 0) {
+                                return "N >= 0";
+                              }
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  type: "rich-text",
+                  templates: customTemplates,
+                },
+                {
+                  label: "Content Style",
+                  name: "contentStyle",
+                  type: "object",
+                  fields: [
+                    {
+                      label: "Content Color",
+                      name: "color",
+                      type: "string",
+                      ui: {
+                        component: "color",
+                        colorFormat: "hex",
+                      },
+                    },
+                    {
+                      label: "Content Placement",
+                      name: "placement",
+                      type: "object",
+                      fields: [
+                        {
+                          label: "Horizontal",
+                          name: "horizontal",
+                          type: "string",
+                          options: [
+                            {
+                              value: "left",
+                              label: "Left",
+                            },
+                            {
+                              value: "center",
+                              label: "Center",
+                            },
+                            {
+                              value: "right",
+                              label: "Right",
+                            },
+                          ],
+                        },
+                        {
+                          label: "Vertical",
+                          name: "vertical",
+                          type: "string",
+                          templates: [],
+                          options: [
+                            {
+                              value: "top",
+                              label: "Top",
+                            },
+                            {
+                              value: "center",
+                              label: "Center",
+                            },
+                            {
+                              value: "bottom",
+                              label: "Bottom",
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    {
+                      label: "Content Padding",
+                      name: "padding",
+                      type: "object",
+                      fields: [
+                        {
+                          label: "Horizontal",
+                          name: "horizontal",
+                          type: "number",
+                          ui: {
+                            validate: (val) => {
+                              if (val < 0) {
+                                return "N >= 0";
+                              }
+                            },
+                          },
+                        },
+                        {
+                          label: "Vertical",
+                          name: "vertical",
+                          type: "number",
+                          ui: {
+                            validate: (val) => {
+                              if (val < 0) {
+                                return "N >= 0";
+                              }
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
       ],
       ui: {
@@ -47,6 +287,11 @@ const schema = defineSchema({
           type: "string",
           label: "Title",
           name: "title",
+        },
+        {
+          type: "image",
+          label: "Thumbnail Image",
+          name: "thumbnail",
         },
         {
           label: "Metadata",
@@ -103,19 +348,7 @@ const schema = defineSchema({
           //   component: "textarea",
           // },
           type: "rich-text",
-          templates: [
-            // {
-            //   name: "Callout",
-            //   label: "Callout",
-            //   fields: [
-            //     {
-            //       name: "message",
-            //       label: "Message",
-            //       type: "string",
-            //     },
-            //   ],
-            // },
-          ],
+          templates: customTemplates,
         },
       ],
       ui: {

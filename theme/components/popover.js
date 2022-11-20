@@ -39,7 +39,7 @@ const neoBrutalistVariant = definePartsStyle((props) => {
       fontFamily: "mono",
       fontWeight: "bold",
       bg: mode(`${c}.300`, `${c}.600`)(props),
-      color: mode("neutral.100", "gray.800")(props),
+      color: mode("neutral.900", "neutral.100")(props),
       border: "2px solid",
       borderColor: mode("black", "white")(props),
     },

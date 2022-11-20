@@ -1,10 +1,10 @@
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 
-export const CustomLink = ({ href, children, otherProps }) => {
+export const CustomLink = ({ href, children, rest }) => {
   return (
     <NextLink href={href} passHref>
-      <Link {...otherProps}>{children}</Link>
+      <Link textDecor="underline" {...rest}>{children}</Link>
     </NextLink>
   );
 };
