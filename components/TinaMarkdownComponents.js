@@ -12,17 +12,33 @@ import {
 import { CustomLink } from "./CustomLink";
 import { RandomText } from "./RandomText";
 
+import { ThemeContext } from "../theme/context";
+import { useContext } from "react";
+import { CustomCode } from "./CustomCode";
+import { StyleBox } from "./StyleBox";
+import { CustomVideo } from "./CustomVideo";
+
 export const components = {
   a: (props) => {
-    return <CustomLink href={props?.href ?? "/"}>{props?.children}</CustomLink>;
+    const context = useContext(ThemeContext);
+    const colorScheme = context.colorScheme;
+    return (
+      <CustomLink colorScheme={colorScheme} href={props?.url ?? "/"}>
+        {props?.children}
+      </CustomLink>
+    );
   },
   img: (props) => {
     return (
       <Container width="100%" maxWidth="768px" p="6">
-        <Image src={props?.url} />
-        <Center>
-          <Text>{props.caption}</Text>
-        </Center>
+        <StyleBox p={0}>
+          <Image maxWidth="100%" maxHeight="100%" src={props?.url} />
+        </StyleBox>
+        {props?.caption && (
+          <Center pt="2">
+            <Text>{props?.caption}</Text>
+          </Center>
+        )}
       </Container>
     );
   },
@@ -75,17 +91,32 @@ export const components = {
       </Text>
     );
   },
-  code: (props) => {
+  code_block: (props) => {
+    const context = useContext(ThemeContext);
+    const colorScheme = context.colorScheme;
     return (
-      <Code pb="2">
-        <pre>{props.children}</pre>
-      </Code>
+      <CustomCode colorScheme={colorScheme} pb="2">
+        {props.value}
+      </CustomCode>
     );
+  },
+  video: (props) => {
+    return <CustomVideo {...props} />;
+  },
+  textArea: (props) => {
+    return (
+      <Box {...props.style}>
+        <Text>{props.text}</Text>
+      </Box>
+    );
+  },
+  code: (props) => {
+    return <CustomCode pb="2">{props.children}</CustomCode>;
   },
   RandomText: (props) => {
     return (
       <RandomText
-        textArray={props?.text}
+        textArray={props?.texts}
         bold={props?.bold}
         italic={props?.italic}
       />
@@ -94,7 +125,7 @@ export const components = {
   Button: (props) => {
     return (
       <Box>
-        <Button >
+        <Button>
           <CustomLink href={props?.href ?? "/"}>{props?.text}</CustomLink>
         </Button>
       </Box>

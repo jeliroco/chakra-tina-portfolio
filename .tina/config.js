@@ -1,47 +1,11 @@
 import { defineSchema, defineConfig } from "tinacms";
+import { customTemplates, Grid } from "./customTemplates";
 
-const customTemplates = [
-  {
-    name: "Button",
-    label: "Button",
-    type: "object",
-    fields: [
-      {
-        name: "text",
-        label: "Text",
-        type: "string",
-      },
-      {
-        name: "href",
-        label: "URL",
-        type: "string",
-      },
-    ],
-  },
-  {
-    name: "RandomText",
-    label: "Random Text",
-    type: "object",
-    fields: [
-      {
-        name: "bold",
-        label: "Bold",
-        type: "boolean",
-      },
-      {
-        name: "italic",
-        label: "Italic",
-        type: "boolean",
-      },
-      {
-        name: "text",
-        label: "Text",
-        type: "string",
-        list: true,
-      },
-    ],
-  },
-];
+const validatePositiveInteger = (val) => {
+  if (val < 0) {
+    return "N >= 0";
+  }
+};
 
 const schema = defineSchema({
   config: {
@@ -84,7 +48,7 @@ const schema = defineSchema({
                   label: "Content",
                   name: "content",
                   type: "rich-text",
-                  templates: [],
+                  templates: customTemplates,
                 },
               ],
             },
@@ -266,6 +230,7 @@ const schema = defineSchema({
                 },
               ],
             },
+            Grid,
           ],
         },
       ],
@@ -344,9 +309,6 @@ const schema = defineSchema({
           label: "Blog Post Body",
           name: "body",
           isBody: true,
-          // ui: {
-          //   component: "textarea",
-          // },
           type: "rich-text",
           templates: customTemplates,
         },

@@ -35,8 +35,8 @@ export const HeroImage = (props) => {
   };
   return (
     <motion.div
-      initial={{ originY: 0, scaleY: 0, opacity: 0 }}
-      animate={{ scaleY: 1, y: 0, opacity: 1 }}
+      initial={{ scaleX: 0, opacity: 0 }}
+      animate={{ scaleX: loaded ? 1 : 0, y: 0, opacity: loaded ? 1 : 0 }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ ease: "easeInOut", type: "spring", duration: 1 }}
@@ -66,7 +66,8 @@ export const HeroImage = (props) => {
               position="absolute"
               inset="0"
               opacity="0.8"
-              style={{ mixBlendMode: "color-burn" }}
+              mixBlendMode="color-burn"
+              transition="transform 0.5s ease-out, background 0.5s ease-out"
               bg={`${c}.200`}
             ></Box>
           )}
@@ -92,28 +93,7 @@ export const HeroImage = (props) => {
             }
             color={props?.contentStyle?.color}
             textAlign={props?.contentStyle?.placement?.horizontal}
-            textShadow={
-              props?.contentStyle.color
-                ? `2px 2px 1px ${invertColor(
-                    props?.contentStyle.color
-                      ? props?.contentStyle.color?.substring(1)
-                      : "white"
-                  )}, -2px 2px 1px ${invertColor(
-                    props?.contentStyle.color
-                      ? props?.contentStyle.color?.substring(1)
-                      : "white"
-                  )}, -2px -2px 1px ${invertColor(
-                    props?.contentStyle.color
-                      ? props?.contentStyle.color?.substring(1)
-                      : "white"
-                  )}, 2px -2px 1px ${invertColor(
-                    props?.contentStyle.color
-                      ? props?.contentStyle.color?.substring(1)
-                      : "white"
-                  )} 
-                                  `
-                : null
-            }
+            textShadow={`2px 2px 1px black, -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black`}
           >
             <Box>
               <TinaMarkdown content={props?.content} components={components} />

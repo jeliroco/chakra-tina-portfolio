@@ -22,7 +22,7 @@ const neoBrutalistVariant = defineStyle((props) => {
   return {
     bg: mode("white", "black")(props),
     color: mode("neutral.900", "neutral.100")(props),
-    transition: "transform 0.15s ease-out, background 0.15s ease-out",
+    transition: "transform 0.5s ease-out, background 0.5s ease-out",
     border: "2px solid",
     borderColor: mode(`${c}.600`, `${c}.700`)(props),
     boxShadow: mode(`6px 6px ${c600}`, `6px 6px ${c700}`)(props),

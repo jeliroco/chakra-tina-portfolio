@@ -1,5 +1,5 @@
 ---
-title: jeliroco..
+title: Home
 blocks:
   - image: /uploads/15896035_10158267778940713_1412722034237345600_o.jpg
     imageStyle:
@@ -11,14 +11,14 @@ blocks:
       size:
         height: 28
     content: >+
-      # jeliroco..
+      # jeliroco
 
 
-      <RandomText bold={true} italic={true} text={["drop spacecamp interlude..",
-      "wear many hats..", "abandon cynicism..", "live unusually..", "oh yeah,
-      it's gamer time..", "never overpromise and underdeliver..", "kindness
-      never comes too soon..", "process over product..", "learn to make
-      everything..", "art for the sake of it.."]} />
+      <RandomText bold={true} italic={true} texts={["knock 'em dead..", "nothing
+      is precious..", "wear many hats..", "abandon cynicism..", "live
+      unusually..", "exceed expectations..", "kindness comes first..", "process
+      over product..", "learn to make everything..", "art for the sake of
+      it.."]} />
 
     contentStyle:
       color: '#FFFFFF'
@@ -27,58 +27,152 @@ blocks:
         vertical: bottom
     _template: heroImage
   - content: >
-      ## Hi, I'm jeliroco..
+      ## Hi, I'm Liam.
 
 
       I'm a
 
       solutions-oriented software architect, designer, and developer with the
-      ability
-
-      to look beyond confines of the current project to optimize the future. I
-      never
-
-      want to solve the same problem twice, and my modular development
-      philosophy
-
-      reflects that.
+      ability to look beyond the confines of an individual project to optimize
+      for the future. I never want to solve the same problem twice, and my
+      modular development philosophy reflects that.
 
 
-      I'm also a
-
-      creative tinkerer with a broad range of development experience in various
-
-      domains. I view programming as an extension of my creative toolkit, and
-      seek to
-
-      create beauty through code.
+      (This site is actually a great example of modular software... [more on
+      that here](/posts/site-retrospective).)
 
 
-      I'm an
+      I'm a creative tinkerer with a broad range of development experience in
+      various domains. I view programming as an extension of my creative
+      toolkit, and seek to create beauty through code.
 
-      authentic communicator. I believe in plain speaking, diplomacy, and
-      honesty,
 
-      whether leading a client meeting or a cross-functional work session. I
-      have
-
-      found a niche in liasing between the technical vernacular of developers,
-      the
+      I'm an authentic communicator. I believe in plain speaking, diplomacy, and
+      honesty, whether leading a client meeting or a cross-functional work
+      session. I have found a niche in liasing between the technical vernacular
+      of developers, the
 
       scientific language of content writers, and the business vocabulary of
       clients.
 
 
-      My skillset
-
-      extends far beyond the domain of software and into the realm of video and
-      music
-
-      production, theatre and film, and visual art. I love to integrate these
-      skills
-
-      into my work wherever I can find the opportunity.
+      My skillset extends far beyond the domain of software and into the realm
+      of video and music production, theatre and film, and visual art. I love to
+      integrate these skills into my work wherever I can find the opportunity.
     _template: contentArea
+  - image: /uploads/PXL_20221120_081653216(1).jpg
+    imageStyle:
+      filter: grayscale(80%) brightness(110%)
+      applyThemeFilter: true
+      crop:
+        fit: cover
+        position: 20% 20%
+      size:
+        height: 28
+    content: >
+      # development
+
+
+      <RandomText bold={true} italic={true} texts={["lost in the sauce..", "nerd
+      alert..", "maximized flow..", "it's gamer time..", "*nulls your
+      pointer*..", "rolling code.."]} />
+    contentStyle:
+      color: '#FFFFFF'
+      placement:
+        horizontal: center
+        vertical: bottom
+    _template: heroImage
+  - content: >
+      ## I love code.
+
+
+      I have been programming for about 15 years now. My first programming
+      language was Actionscript 2 for Macromedia Flash. I made some silly little
+      web games with it, and from then on I knew that programming was always
+      going to be a part of my life. I went on to learn web development in high
+      school, and was the only one in my class who "hand-wrote" my website while
+      everyone else used Dreamweaver — I consequently then fixed everyone's
+      Dreamweaver sites as the auto-generated DOMs were horrendous back
+      then.&#x20;
+
+
+      <video
+        src="https://www.youtube.com/embed/F3A9mEle-NI"
+        description={{
+          text: 'Here\'s a game I helped to create during undergrad. It was 2014/15 and the Oculus Rift DK2 had just come out. We decided to make a very unique kind of VR game. To this day I have never seen anything like it. Also, I was the voice of "Alaska Steve", and I still find him as hilarious as the day I created him.',
+          style: { textAlign: { base: "center" }, padding: { base: "12px 0 0 0" } }
+        }}
+      />
+
+
+      I went on to attend Queen's University for 8 years to learn everything I
+      could about game development. In the process, I earned myself an Bachelor
+      of Computer Science (with a specialization in software/game design) as
+      well as a Master's of Science (with a focus on exergaming). Since
+      graduation I have tried to learn as much as I can about development of all
+      kinds. Most recently I have been investing a ton of energy into web
+      development using modern JS frameworks and tooling.
+
+
+      There are few joys in the world like the convalescence of skill and
+      challenge. This is known as the flow state. I spent a lot of time in my
+      education learning about the flow state and its applications in game
+      design. Ironically though, the act of programming itself induces flow for
+      me like almost nothing else. With every project my skillset expands and I
+      put it to use almost immediately, forever increasing the challenge along
+      with my ability.
+
+
+      I also adore programming not just for its technical challenges, but for
+      its applications in art and media. Whether it be art, music, or video
+      creation, everything seems to be improved with technology. With that in
+      mind, here are some samples from my portfolio. All three of these projects
+      are built using the Unity game engine. For each project, I have created a
+      post outlining my role(s) on the project, the intended outcomes of my
+      work, and some features that I am particularly proud of.
+    _template: contentArea
+  - style:
+      gridTemplateColumns:
+        base: 'repeat(1,1fr)'
+        sm: 'repeat(2,1fr)'
+        md: 'repeat(3,1fr)'
+        lg: ''
+        xl: ''
+    gridItems:
+      - src: 'https://www.youtube.com/embed/uPows5QoTSs'
+        description:
+          text: SuperGrav - An Interactive 2D Gravity Simulation
+          style:
+            textAlign:
+              base: center
+            fontWeight:
+              base: bold
+        link:
+          url: /posts/super-grav
+        _template: video
+      - src: 'https://www.youtube.com/embed/WDogXM3-mfg'
+        description:
+          text: VOID AVOID - An Intentionally Simple Mobile Game
+          style:
+            textAlign:
+              base: center
+            fontWeight:
+              base: bold
+        link:
+          url: posts/void-avoid
+        _template: video
+      - src: 'https://www.youtube.com/embed/HuS94ivQRok'
+        description:
+          text: Hereafter - An Atmospheric Mini Project
+          style:
+            textAlign:
+              base: center
+            fontWeight:
+              base: bold
+        link:
+          url: /posts/hereafter
+        _template: video
+    _template: grid
   - image: /uploads/60347354_10158620084189698_1601954880795181056_n.jpg
     imageStyle:
       applyThemeFilter: true
@@ -87,15 +181,14 @@ blocks:
         position: 0% 30%
       size:
         height: 28
-    content: >+
-      # music..
+    content: >
+      # music
 
 
-      <RandomText bold={true} text={["the winner takes it all..", "gimme a
+      <RandomText bold={true} texts={["the winner takes it all..", "gimme a
       beat..", "tickling the ivories..", "play freebird..", "alright, here's
       wonderwall..", "and a one, and a two..", "count me in.."]} italic={true}
       />
-
     contentStyle:
       color: '#FFFFFF'
       placement:

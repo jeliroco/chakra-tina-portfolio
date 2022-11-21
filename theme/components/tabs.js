@@ -40,7 +40,7 @@ const neoBrutalistVariant = definePartsStyle((props) => {
       color: mode(`${c}.400`, `${c}.400`)(props),
       border: "2px solid",
       borderColor: mode(`${c}.400`, `${c}.400`)(props),
-      transition: "transform 0.15s ease-out, background 0.15s ease-out",
+      transition: "transform 0.5s ease-out, background 0.5s ease-out",
       _hover: {
         transform: "scale(1.05, 1.05)",
         bg: mode(`${c}.300`, `${c}.300`)(props),
@@ -56,6 +56,7 @@ const neoBrutalistVariant = definePartsStyle((props) => {
       bg: mode(`${c}.300`, `${c}.600`)(props),
       border: "2px solid",
       borderColor: mode("black", "white")(props),
+      transition: "transform 0.5s ease-out, background 0.5s ease-out",
       p: 2,
     },
     tabpanel: {

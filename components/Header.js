@@ -21,17 +21,17 @@ export const Header = (props) => {
   const navItems = [
     {
       href: "/",
-      title: "home..",
+      title: "Home",
       icon: <Icon as={RiHome4Line} w={6} h={6} />,
     },
     {
       href: "/about",
-      title: "about..",
+      title: "About",
       icon: <Icon as={RiQuestionLine} w={6} h={6} />,
     },
     {
       href: "/posts",
-      title: "posts..",
+      title: "Posts",
       icon: <Icon as={RiArticleLine} w={6} h={6} />,
     },
   ];

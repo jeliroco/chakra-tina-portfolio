@@ -13,12 +13,12 @@ export default function PostLayout(props) {
     <OSLayout page={post}>
       <Box p={2}>
         <PostDate
-          createdAt={post.metadata.createdAt}
-          editedAt={post.metadata.editedAt}
+          createdAt={post.metadata?.createdAt}
+          editedAt={post.metadata?.editedAt}
         />
       </Box>
       <Box p="2" pt="0" display="flex" flexDirection="column" gap="2">
-        <TinaMarkdown content={post.body} components={components} />
+        <TinaMarkdown content={post?.body} components={components} />
       </Box>
     </OSLayout>
   );

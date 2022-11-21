@@ -5,7 +5,7 @@ metadata:
   createdAt: '2022-11-15T17:00:00.000Z'
   editedAt: '2022-11-17T23:10:00.000Z'
 tags:
-  - tag: compsci
+  - tag: music
 ---
 
 ## Lorem ipsum dolor sit amet!
@@ -42,7 +42,6 @@ Integer cursus condimentum justo vitae consectetur. Aliquam rhoncus ut&#x20;
 nibh vitae gravida.
 
 ```javascript
-if (someCriteria) {
-  doSomething();
-}
+sdfsdfsdfdfsdf
+sfsdf
 ```

@@ -6,7 +6,7 @@ export const globalTheme = defineStyle((props) => {
     body: {
       bg: mode("neutral.100", "neutral.900")(props),
       color: mode("neutral.900", "neutral.100")(props),
-      transition: "transform 0.15s ease-out, background 0.15s ease-out",
+      transition: "transform 0.5s ease-out, background 0.5s ease-out",
     },
   };
 });

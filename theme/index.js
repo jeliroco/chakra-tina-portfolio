@@ -2,6 +2,7 @@ import { defineStyleConfig, extendTheme, useColorMode } from "@chakra-ui/react";
 import { getPopoverTheme } from "./components/popover";
 import { getTabsTheme } from "./components/tabs";
 import { getButtonTheme } from "./components/button";
+import { getCheckboxTheme } from "./components/checkbox";
 import { getHeaderTheme } from "./components/header";
 import { getFooterTheme } from "./components/footer";
 import { getMainTheme } from "./components/main";
@@ -29,6 +30,7 @@ const getTheme = (themeConfig) => {
       Tabs: getTabsTheme(themeConfig),
       Popover: getPopoverTheme(themeConfig),
       Button: getButtonTheme(themeConfig),
+      Checkbox: getCheckboxTheme(themeConfig),
       StyleBox: getStyleBoxTheme(themeConfig),
     },
   });

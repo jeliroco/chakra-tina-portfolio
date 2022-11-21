@@ -1,5 +1,3 @@
-// import from tina
-import { TinaMarkdown } from "tinacms/dist/rich-text";
 // import from chakra
 import {
   Box,
@@ -13,10 +11,6 @@ import {
   TabPanels,
   TabPanel,
   Text,
-  Image,
-  Center,
-  VStack,
-  Collapse,
   Fade,
 } from "@chakra-ui/react";
 // import from react-icons
@@ -24,13 +18,11 @@ import { RiFileTextLine, RiFileCodeLine } from "react-icons/ri";
 // import from components
 import { SimplePopover } from "./SimplePopover";
 import { CustomCode } from "./CustomCode";
-import { components } from "./TinaMarkdownComponents";
 
-import { HeroImage } from "./HeroImage";
 import { useEffect, useState } from "react";
 
 export const OSLayout = (props) => {
-  const { title, page, children, ...rest } = props;
+  const { title, page, dataTabEnabled = true, children, ...rest } = props;
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     setLoaded(true);
@@ -39,9 +31,13 @@ export const OSLayout = (props) => {
     <Box>
       <Tabs>
         <TabList>
-          <Flex w="100%" gap="2">
+          <Flex w="100%" gap="2" alignItems={"center"}>
             <Fade in={loaded}>
-              <Heading as="h1" size={["sm", "xl"]}>
+              <Heading
+                as="h1"
+                noOfLines={[2, 2, 1]}
+                size={["sm", "sm", "md", "lg", "xl"]}
+              >
                 {title ?? page?.title}
               </Heading>
             </Fade>
@@ -60,7 +56,7 @@ export const OSLayout = (props) => {
               trigger="hover"
               placement="top-end"
               triggerContent={
-                <Tab disabled={!page}>
+                <Tab isDisabled={!dataTabEnabled || !page}>
                   <Icon as={RiFileCodeLine} w={6} h={6} />
                 </Tab>
               }

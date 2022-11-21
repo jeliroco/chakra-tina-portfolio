@@ -7,10 +7,8 @@ export const StyleBox = (props) => {
   const styles = useStyleConfig("StyleBox", { variant });
 
   return (
-    <header>
-      <Box __css={styles} {...rest}>
-        {children}
-      </Box>
-    </header>
+    <Box __css={styles} {...rest}>
+      {children}
+    </Box>
   );
 };

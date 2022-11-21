@@ -21,7 +21,7 @@ const neoBrutalistVariant = defineStyle((props) => {
     color: mode("black", "white")(props),
     border: "2px solid",
     borderColor: mode("black", "white")(props),
-    transition: "transform 0.15s ease-out, background 0.15s ease-out",
+    transition: "transform 0.5s ease-out, background 0.5s ease-out",
 
     _hover: {
       transform: "scale(1.05, 1.05)",
