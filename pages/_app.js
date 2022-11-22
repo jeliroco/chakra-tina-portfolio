@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // setup your wrapper in the _app file (e.g: pages/_app.js)
-import { Chakra } from "../src/Chakra";
+import { Chakra } from "../components/Chakra";
 import { ThemeContext } from "../theme/context";
 
 import "@fontsource/jetbrains-mono";
