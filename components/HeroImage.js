@@ -40,8 +40,8 @@ export const HeroImage = (props) => {
   };
   return (
     <motion.div
-      initial={{ scaleX: 0, opacity: 0 }}
-      animate={{ scaleX: loaded ? 1 : 0, y: 0, opacity: loaded ? 1 : 0 }}
+      initial={{ height: 0, scaleY: 0, opacity: 0 }}
+      animate={{ height: loaded ? "auto" : 0, scaleY: loaded ? 1 : 0, y: 0, opacity: loaded ? 1 : 0 }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ ease: "easeInOut", type: "spring", duration: 1 }}
