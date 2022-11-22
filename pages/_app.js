@@ -23,4 +23,4 @@ export default function App({ Component, pageProps }) {
 }
 
 // re-export the reusable `getServerSideProps` function
-export { getServerSideProps } from "../src/Chakra";
+export { getServerSideProps } from "../components/Chakra";
