@@ -7,7 +7,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { components } from "./TinaMarkdownComponents";
 
 import { ThemeContext } from "../theme/context";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Button } from "tinacms";
 
 import { motion } from "framer-motion";
@@ -15,11 +15,16 @@ import { motion } from "framer-motion";
 export const HeroImage = (props) => {
   const context = useContext(ThemeContext);
   const c = context.colorScheme;
+
+  const imageRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
+    if (!loaded && imageRef.current?.complete) {
+      setLoaded(true);
+    }
   }, []);
+
   const convertToPlacement = (placementString) => {
     switch (placementString) {
       case "left":
@@ -44,6 +49,7 @@ export const HeroImage = (props) => {
       <StyleBox p="3">
         <StyleBox position="relative" overflow="hidden" p={0}>
           <Image
+            ref={imageRef}
             maxHeight={
               props?.imageStyle?.size?.height
                 ? `${props?.imageStyle?.size?.height}em`
@@ -60,6 +66,7 @@ export const HeroImage = (props) => {
             src={props?.image}
             objectFit={props?.imageStyle?.crop?.fit ?? null}
             objectPosition={props?.imageStyle?.crop?.position ?? null}
+            onLoad={() => setLoaded(true)}
           ></Image>
           {props?.imageStyle?.applyThemeFilter && (
             <Box
