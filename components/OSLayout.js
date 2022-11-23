@@ -41,7 +41,7 @@ export const OSLayout = (props) => {
                 {title ?? page?.title}
               </Heading>
             </Fade>
-            <Spacer minWidth="10" />
+            <Spacer minWidth="0" />
             <SimplePopover
               trigger="hover"
               placement="top-end"
