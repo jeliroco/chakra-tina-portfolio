@@ -28,11 +28,26 @@ export const components = {
       </CustomLink>
     );
   },
-  img: (props) => {
+  // TODO: Figure out this hydration error
+  // img: (props) => {
+  //   return (
+  //     <Container width="100%" maxWidth="768px" p="6">
+  //       <StyleBox p={0}>
+  //         <img src={props?.url} />
+  //       </StyleBox>
+  //       {props?.caption && (
+  //         <Center pt="2">
+  //           <Text>{props?.caption}</Text>
+  //         </Center>
+  //       )}
+  //     </Container>
+  //   );
+  // },
+  image: (props) => {
     return (
       <Container width="100%" maxWidth="768px" p="6">
         <StyleBox p={0}>
-          <Image maxWidth="100%" maxHeight="100%" src={props?.url} />
+          <img src={props?.url} />
         </StyleBox>
         {props?.caption && (
           <Center pt="2">

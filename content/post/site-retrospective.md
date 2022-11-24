@@ -12,7 +12,7 @@ tags:
 
 It is currently 4:19AM. I have been working tirelessly on this site for the past few days -- maybe more, I have lost track -- and I have absolutely fallen in love with this architecture. This site is built using Tina.io and Chakra UI. On their own, both of these technologies are very strong, but together, they are an absolutely unbeatable stack.
 
-![](</uploads/Screenshot 2022-11-20 042342.png> "^ This is what I see when I write content for this site.")
+<image url="/uploads/Screenshot 2022-11-20 042342.png" caption="^ This is what it looks like when I write content for this site." />
 
 Tina.io uses Git and Markdown to produce a lightweight and flexible CMS. This allows me to throw together content really quickly, and that content will be very accessible later. No coding knowledge is really required to write content for a Tina application. Tina even has a Cloud service that you can use to write content without even needing a Git client.
 
@@ -26,7 +26,7 @@ I genuinely can't believe that just worked. I am literally testing things as I w
 
 It is now 4:35AM.
 
-![](/uploads/PXL_20221120_081653216\(1\).jpg "Lost in the sauce...")
+<image url="/uploads/PXL_20221120_081653216(1).jpg" caption="lost in the sauce" />
 
 Anyways, as I was saying... Once I have set up the Tina schema and provided the associated components to be displayed, I can use the Tina admin panel to edit any fields I want. The sky is truly the limit.
 

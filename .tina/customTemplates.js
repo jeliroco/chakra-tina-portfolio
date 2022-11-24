@@ -42,6 +42,26 @@ export const customTemplates = [
     ],
   },
   {
+    name: "image",
+    label: "Image",
+    type: "object",
+    fields: [
+      {
+        name: "url",
+        label: "URL",
+        type: "image",
+      },
+      {
+        name: "caption",
+        label: "Caption",
+        type: "string",
+        ui: {
+          component: "textarea",
+        },
+      },
+    ],
+  },
+  {
     name: "video",
     label: "Video",
     type: "object",
