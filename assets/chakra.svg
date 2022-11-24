@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458334"
+   version="1.1"
+   id="svg2296"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="chakra.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2298"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="3.2035073"
+     inkscape:cx="238.17645"
+     inkscape:cy="129.85767"
+     inkscape:window-width="2560"
+     inkscape:window-height="1346"
+     inkscape:window-x="-11"
+     inkscape:window-y="1609"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2293" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2391"
+       style="fill:#000000;stroke-width:1.323;stroke-linecap:square;stroke-dasharray:5.29201, 2.64599;paint-order:markers fill stroke"
+       d="M 13.228944,0 A 13.22911,13.229112 0 0 0 0,13.229389 13.22911,13.229112 0 0 0 13.228944,26.458333 13.22911,13.229112 0 0 0 26.458333,13.229389 13.22911,13.229112 0 0 0 13.228944,0 Z m 3.356233,4.865915 -3.444672,6.960452 h 6.32138 L 8.8785513,21.308878 13.815131,14.135106 H 7.3159849 Z" />
+  </g>
+</svg>
