@@ -11,7 +11,7 @@ import { TinaTemplate } from "./TinaTemplate";
 export const CustomGrid = (props) => {
   const { gridItems, children, ...rest } = props;
   const style = cleanupStyle(props.style);
-  const numItems = useBreakpointValue(style?.numItems);
+  const numItems = useBreakpointValue(style?.numItems ?? {base: Number.MAX_SAFE_INTEGER});
 
   return (
     <Grid w="100%" gap={4} {...style}>
