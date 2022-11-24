@@ -9,8 +9,14 @@ import {
   Icon,
   IconButton,
   Text,
+  Spacer,
 } from "@chakra-ui/react";
-import { RiHome4Line, RiQuestionLine, RiArticleLine } from "react-icons/ri";
+import {
+  RiHome4Line,
+  RiQuestionLine,
+  RiArticleLine,
+  RiHammerLine,
+} from "react-icons/ri";
 import { SimplePopover } from "./SimplePopover";
 
 export const Header = (props) => {
@@ -48,7 +54,7 @@ export const Header = (props) => {
                   placement="bottom-start"
                   triggerContent={
                     <IconButton
-                      aria-label="Toggle Color Palette"
+                      aria-label={navItem.title}
                       icon={navItem.icon}
                     />
                   }
@@ -57,6 +63,22 @@ export const Header = (props) => {
               </CustomLink>
             );
           })}
+          <Spacer />
+          <SimplePopover
+            trigger="hover"
+            placement="bottom-end"
+            triggerContent={
+              <IconButton
+                aria-label="This Site Under Construction"
+                icon={<Icon as={RiHammerLine} w={6} h={6} />}
+              />
+            }
+            bodyContent={
+              <Text>
+                Under Construction...
+              </Text>
+            }
+          />
         </HStack>
       </Box>
     </header>

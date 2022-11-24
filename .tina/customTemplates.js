@@ -143,6 +143,12 @@ export const Grid = {
           type: "object",
           fields: responsiveStyleFields,
         },
+        {
+          name: "numItems",
+          label: "Number Of Items",
+          type: "object",
+          fields: responsiveStyleFields,
+        },
       ],
     },
     {

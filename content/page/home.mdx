@@ -134,10 +134,18 @@ blocks:
   - style:
       gridTemplateColumns:
         base: 'repeat(1,1fr)'
-        sm: 'repeat(2,1fr)'
-        md: 'repeat(3,1fr)'
-        lg: ''
+        sm: ''
+        md: 'repeat(2,1fr)'
+        lg: 'repeat(3,1fr)'
         xl: ''
+      gridTemplateRows:
+        base: ''
+      numItems:
+        base: ''
+        sm: '2'
+        md: '2'
+        lg: '3'
+        xl: '3'
     gridItems:
       - src: 'https://www.youtube.com/embed/uPows5QoTSs'
         description:
@@ -173,6 +181,13 @@ blocks:
           url: /posts/hereafter
         _template: video
     _template: grid
+  - content: >
+      To ensure that you don't love me *only* for my brain, I also intend to use
+      this site to demonstrate that I am a well-rounded individual. My career
+      has spanned across multiple unique domains, and I'm very proud of that
+      fact. The following sections will dive a little into all of that
+      information!
+    _template: contentArea
   - image: /uploads/60347354_10158620084189698_1601954880795181056_n.jpg
     imageStyle:
       applyThemeFilter: true
@@ -194,6 +209,16 @@ blocks:
       placement:
         horizontal: center
         vertical: bottom
+    _template: heroImage
+  - image: /uploads/PXL_20221122_001503627.jpg
+    imageStyle:
+      filter: grayscale(60%) brightness(1.2)
+      applyThemeFilter: true
+      crop:
+        fit: cover
+      size:
+        height: 28
+    content: ''
     _template: heroImage
 ---
 

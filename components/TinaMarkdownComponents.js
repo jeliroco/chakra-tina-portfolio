@@ -17,6 +17,7 @@ import { useContext } from "react";
 import { CustomCode } from "./CustomCode";
 import { StyleBox } from "./StyleBox";
 import { CustomVideo } from "./CustomVideo";
+import { CustomGrid } from "./CustomGrid";
 
 export const components = {
   a: (props) => {
@@ -145,5 +146,8 @@ export const components = {
         </Button>
       </Box>
     );
+  },
+  grid: (props) => {
+    return <CustomGrid {...props} />;
   },
 };

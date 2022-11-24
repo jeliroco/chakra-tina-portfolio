@@ -310,7 +310,7 @@ const schema = defineSchema({
           name: "body",
           isBody: true,
           type: "rich-text",
-          templates: customTemplates,
+          templates: [...customTemplates, Grid],
         },
       ],
       ui: {
