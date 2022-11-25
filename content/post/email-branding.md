@@ -5,7 +5,6 @@ metadata:
   createdAt: '2022-11-24T00:44:00.000Z'
   editedAt: '2022-11-24T00:44:00.000Z'
 tags:
-  - tag: dev
   - tag: art
 ---
 
