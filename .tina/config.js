@@ -57,6 +57,12 @@ const schema = defineSchema({
               name: "heroImage",
               fields: [
                 {
+                  label: "Published",
+                  name: "published",
+                  type: "boolean",
+                  templates: [],
+                },                
+                {
                   label: "Image",
                   name: "image",
                   type: "image",

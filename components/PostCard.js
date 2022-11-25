@@ -15,22 +15,34 @@ import {
 import { StyleBox } from "./StyleBox";
 import { FormattedDate } from "./FormattedDate";
 import { CustomLink } from "./CustomLink";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export const PostCard = (props) => {
-  const { post, loadDelay = 0, children, ...rest } = props;
+  const { post, children, ...rest } = props;
+
+  const [loadDelay, setLoadDelay] = useState(props?.loadDelay ?? 0);
+
+  const imageRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
-      setLoaded(true);
+      if (!loaded && imageRef.current?.complete) {
+        setLoaded(true);
+      }
     }, loadDelay);
-  }, []);
+    setLoadDelay(0);
+  }, [loaded]);
 
   return (
     <motion.div
       initial={{ originY: 0, scaleY: 0, opacity: 0 }}
-      animate={{ scaleY: 1, y: 0, opacity: 1 }}
+      animate={{
+        scaleY: loaded ? 1 : 0,
+        y: 0,
+        opacity: loaded ? 1 : 0,
+      }}
       transition={{
         delay: loadDelay * 0.002,
         ease: "easeInOut",
@@ -63,6 +75,8 @@ export const PostCard = (props) => {
                     objectFit="cover"
                     objectPosition="50% 50%"
                     src={post?.thumbnail}
+                    ref={imageRef}
+                    onLoad={() => setLoaded(true)}
                   />
                 </StyleBox>
               )}
