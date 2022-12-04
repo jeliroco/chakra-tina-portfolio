@@ -24,7 +24,13 @@ Secondly, I will allow myself to publish posts on any topic. The focus of the si
 
 Thirdly, I will not limit myself to topics in which I am an expert. For example, I have always dabbled with visual art, but I have never been particularly good at it. However, in the words of Jake from Adventure Time, "sucking at something is the first step towards being sorta good at something". By letting myself share all the stuff I'm no good at, maybe I can push myself a little more to progress and improve.
 
-<video src="https://www.youtube.com/embed/Gu8YiTeU9XU" />
+<video
+  src="https://www.youtube.com/embed/Gu8YiTeU9XU"
+  description={{
+    text: "Yes, I am quoting a cartoon dog in my professional portfolio.",
+    style: { textAlign: { base: "center" } }
+  }}
+/>
 
 I am hoping that these core tenets will provide me with great opportunity for personal growth. They will ideally help me move past perfectionism, towards a state of constant iteration towards success. For you, the reader, I hope these tenets provide you with a better understanding of who I am. When it comes to the topic of myself, there is no greater expert than me, and if you are going to take anything away from this portfolio, it may as well be the truth.
 
