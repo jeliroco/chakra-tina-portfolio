@@ -34,4 +34,4 @@ Thirdly, I will not limit myself to topics in which I am an expert. For example,
 
 I am hoping that these core tenets will provide me with great opportunity for personal growth. They will ideally help me move past perfectionism, towards a state of constant iteration towards success. For you, the reader, I hope these tenets provide you with a better understanding of who I am. When it comes to the topic of myself, there is no greater expert than me, and if you are going to take anything away from this portfolio, it may as well be the truth.
 
-I like to think that if I were Grandma, I would want to know the truth about my stuffing.
+*If I were Grandma, I would want to know the truth about my stuffing.*
