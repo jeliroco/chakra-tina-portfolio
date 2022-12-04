@@ -10,7 +10,7 @@ tags:
 
 Why lie when you could tell the truth?
 
-Brad Blanton's Radical Honesty discusses the merits of telling only the truth⁠—not even white lies⁠—about the world around us. While very ethical in theory, the results of radical honesty can often be negative; there are times when a white lie can protect a person from an uncomfortable truth. We don't need to tell Grandma that her stuffing was better last year.
+Brad Blanton's *Radical Honesty *discusses the merits of telling only the truth⁠—not even white lies⁠—about the world around us. While very ethical in theory, the results of radical honesty can often be negative; there are times when a white lie can protect a person from an uncomfortable truth. We don't need to tell Grandma that her stuffing was better last year.
 
 But what happens when we stop telling little white lies about ourselves?&#x20;
 
