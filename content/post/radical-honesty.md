@@ -18,7 +18,9 @@ It goes without saying that a portfolio website is typically used to "put one's 
 
 In an effort to push myself out of my comfort zone, I have made some intentional choices with this portfolio site that could be considered unorthodox.
 
-Firstly, the only way for me to save a post is to publish it. The moment it is published, it appears in the post list.
+Firstly, the only way for me to save a post is to publish it. The moment it is published, it appears in the post list. I will always allow myself to go back and edit posts, but I will not allow myself to delete them. I will refrain from "unringing that bell".
 
 <image url="/uploads/radical-honesty.png" caption="" />
+
+Secondly, I will not select a single subject for the site. I will allow myself to publish posts about any topic. The focus of the site is development, because that's my primary career path. But I will also feature posts from other domains⁠ (whether  I am an expert in that domain, or not).
 
