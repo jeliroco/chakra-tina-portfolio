@@ -18,4 +18,7 @@ It goes without saying that a portfolio website is typically used to "put one's 
 
 In an effort to push myself out of my comfort zone, I have made some intentional choices with this portfolio site that could be considered unorthodox.
 
-Firstly, the only way for me to save a post is to publish it. The moment it is published, it appears in the&#x20;
+Firstly, the only way for me to save a post is to publish it. The moment it is published, it appears in the post list.
+
+<image url="/uploads/radical-honesty.png" caption="" />
+
