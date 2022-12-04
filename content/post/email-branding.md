@@ -17,7 +17,7 @@ I finally set myself with a Google Domain and deployed this app via Vercel. I wa
       url: "/uploads/jeliroco.png",
       caption: 'The "Admin" Icon'
     },
-    { _template: "image", url: "/uploads/dev.png", caption: 'The "Dev Icon"' },
+    { _template: "image", url: "/uploads/dev.png", caption: 'The "Dev" Icon' },
     { _template: "image", url: "/uploads/music.png", caption: 'The "Music" Icon' }
   ]}
   style={{

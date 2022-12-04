@@ -30,11 +30,11 @@ export const Header = (props) => {
       title: "Home",
       icon: <Icon as={RiHome4Line} w={6} h={6} />,
     },
-    {
-      href: "/about",
-      title: "About",
-      icon: <Icon as={RiQuestionLine} w={6} h={6} />,
-    },
+    // {
+    //   href: "/about",
+    //   title: "About",
+    //   icon: <Icon as={RiQuestionLine} w={6} h={6} />,
+    // },
     {
       href: "/posts",
       title: "Posts",

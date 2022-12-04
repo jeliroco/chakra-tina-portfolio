@@ -36,3 +36,16 @@ This workflow is perfect for component-driven development. Now that I have a sol
 It is 4:49AM, and I am actually going to go to bed. I swear I'm gonna do it.
 
 TODO: Add a signature component, I think that would be nice.
+
+<signature
+  style={{
+    width: { base: "100px", md: "150px", lg: "200px" },
+    height: { base: "" },
+    display: { base: "" },
+    padding: { base: "" },
+    margin: { base: "" },
+    textAlign: { base: "" },
+    justifyContent: { base: "" }
+  }}
+/>
+

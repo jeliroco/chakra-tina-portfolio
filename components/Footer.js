@@ -14,6 +14,7 @@ import {
   Text,
   Grid,
   GridItem,
+  Link,
 } from "@chakra-ui/react";
 import { useContext } from "react";
 
@@ -124,10 +125,10 @@ export const Footer = (props) => {
             }
           />
           <Spacer />
-          <a href="https://tina.io/">
+          <Link isExternal href="https://tina.io/">
             <SimplePopover
               trigger="hover"
-              placement="top"
+              placement="top-end"
               triggerContent={
                 <IconButton
                   icon={
@@ -152,11 +153,11 @@ export const Footer = (props) => {
               }
               bodyContent={<Text>Made with Tina.io</Text>}
             />
-          </a>
-          <a href="https://chakra-ui.com/">
+          </Link>
+          <Link isExternal href="https://chakra-ui.com/">
             <SimplePopover
               trigger="hover"
-              placement="top"
+              placement="top-end"
               triggerContent={
                 <IconButton
                   icon={
@@ -175,7 +176,7 @@ export const Footer = (props) => {
               }
               bodyContent={<Text>Made with Chakra UI</Text>}
             />
-          </a>
+          </Link>
         </HStack>
       </Box>
     </footer>

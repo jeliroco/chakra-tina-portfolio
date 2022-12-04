@@ -8,7 +8,6 @@ import { components } from "./TinaMarkdownComponents";
 
 import { ThemeContext } from "../theme/context";
 import { useContext, useEffect, useRef, useState } from "react";
-import { Button } from "tinacms";
 
 import { motion } from "framer-motion";
 

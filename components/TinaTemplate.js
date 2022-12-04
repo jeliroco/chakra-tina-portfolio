@@ -24,8 +24,10 @@ export function TinaTemplate(props) {
     return <CustomVideo {...template}></CustomVideo>;
   }
   if (
-    (template?.__typename && template?.__typename.endsWith("image")) ||
-    (template?._template && template?._template.endsWith("image"))
+    (template?.__typename &&
+      template?.__typename?.toLowerCase().endsWith("image")) ||
+    (template?._template &&
+      template?._template?.toLowerCase().endsWith("image"))
   ) {
     return (
       <Container width="100%" maxWidth="768px" p="0">

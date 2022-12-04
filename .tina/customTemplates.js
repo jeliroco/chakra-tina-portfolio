@@ -62,6 +62,31 @@ export const customTemplates = [
     ],
   },
   {
+    name: "link",
+    label: "Link",
+    type: "object",
+    fields: [
+      {
+        name: "url",
+        label: "URL",
+        type: "string",
+      },
+      {
+        name: "isExternal",
+        label: "Is External",
+        type: "boolean",
+      },
+      {
+        name: "text",
+        label: "Text",
+        type: "string",
+        ui: {
+          component: "textarea",
+        },
+      },
+    ],
+  },
+  {
     name: "video",
     label: "Video",
     type: "object",
@@ -116,6 +141,14 @@ export const customTemplates = [
           component: "textarea",
         },
       },
+      styleField,
+    ],
+  },
+  {
+    name: "signature",
+    label: "Signature",
+    type: "object",
+    fields: [
       styleField,
     ],
   },

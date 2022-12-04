@@ -24,7 +24,7 @@ As mentioned previously, our main goal in the creation of Hereafter was atmosphe
 
 ### The GameManager&#x20;
 
-The GameManager uses the singleton design pattern and contains any functions and variables that are relevant to tracking the game state, and any other top-level implementation. Most importantly, the GameManager contains the boolean variable Astral, which describes whether the PC is in the mortal or spiritual plane. When the player is close enough to a yet-undiscovered spirit, he passes into the spiritual plane (Astral = true) until the spirit has finished their dialogue, at which point he passes back into the mortal plane (Astral = false).
+The GameManager uses the singleton design pattern and contains any functions and variables that are relevant to tracking the game state, and any other top-level implementation. Most importantly, the GameManager contains the boolean variable Astral, which describes whether the PC is in the mortal or spiritual plane. When the player is close enough to a yet-undiscovered spirit, he passes into the spiritual plane (Astral = true) until the spirit has finished their dialogue, at which point he passes back into the mortal plane (Astral = false ).
 
 ### The SoundMaster&#x20;
 
@@ -32,4 +32,15 @@ The SoundMaster, also a singleton, is a child of the GameManager, and controls a
 
 ### Spirits and Dialogue&#x20;
 
-There are 6 spirits in the game, each with their own unique dialogue. Since this was a game jam with limited time for implementation, we needed a quick way to handle dialogue for all of the spirits. I therefore implemented spirit dialogue using XML files, and a custom XML Reader script.
+There are 6 spirits in the game, each with their own unique dialogue. Since this was a game jam with limited time for implementation, we needed a quick way to handle dialogue for all of the spirits. I therefore implemented spirit dialogue using XML files, and a custom XML Reader script. Each spirit has a corresponding XML file, containing the following tags:&#x20;
+
+* \<Dialogue> → A container tag for all of a spirit’s dialogue.
+* \<Line> → A line of dialogue. Lines are shown in sequence, so the XML Reader simply  stores them in a List\<string>, which is passed to the spirit’s script.&#x20;
+* \<Hint> → A hint for the player to find an undiscovered spirit. The player is allowed to find  spirits in any order, so each spirit needs to have a hint for all other spirits. When the  player discovers a spirit, that spirit chooses an undiscovered spirit to hint at. The spirit to  which a hint pertains is stored in the attribute “ghostName”. Hints are stored by the XML  Reader in a Dictionary\<string,string>, where the key is the “ghostName”, and the value is  the hint text.
+
+<image url="/uploads/dialogue-xml.png" caption="An example of the structure of a dialogue XML file." />
+
+### Evaluation&#x20;
+
+Overall, I believe that with Hereafter, we succeeded in our goal of creating two distinct  atmospheres using art and music. However, a shortcoming that all team members identified is  the lack of a compelling game mechanic. It would make more sense to call Hereafter a sort of  “experience” rather than a game, for this reason. This lack of mechanical interest is likely due to  the short development schedule. If afforded more time to further design the core gameplay, we  might have chosen to make the game a platformer. What if the game was split into levels, in  which the player had to circumvent obstacles by passing to/from the mortal/spiritual planes? However, having said all of this, I still find Hereafter to be an affecting experience because of  the effort we made to create a dark but whimsical atmosphere.
+

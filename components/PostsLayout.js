@@ -26,7 +26,14 @@ export function PostsLayout({ posts, ...rest }) {
     return array;
   };
 
-  const filters = sortAlphabetical(["dev", "music", "acting", "art", "blog"]);
+  const filters = sortAlphabetical([
+    "dev",
+    "music",
+    "video",
+    "acting",
+    "art",
+    "blog",
+  ]);
 
   const { value, getCheckboxProps } = useCheckboxGroup({
     defaultValue: filters,
@@ -74,9 +81,7 @@ export function PostsLayout({ posts, ...rest }) {
           {posts
             .filter((post) => filterPost(post.node))
             .map((post, i) => (
-              <GridItem
-                key={post.node.id}
-              >
+              <GridItem key={post.node.id}>
                 <PostCard loadDelay={i * 100} post={post.node}></PostCard>
               </GridItem>
             ))}

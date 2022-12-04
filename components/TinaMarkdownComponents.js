@@ -7,6 +7,9 @@ import {
   Image,
   Text,
   Box,
+  ListItem,
+  UnorderedList,
+  OrderedList,
 } from "@chakra-ui/react";
 
 import { CustomLink } from "./CustomLink";
@@ -18,6 +21,7 @@ import { CustomCode } from "./CustomCode";
 import { StyleBox } from "./StyleBox";
 import { CustomVideo } from "./CustomVideo";
 import { CustomGrid } from "./CustomGrid";
+import { Signature } from "./Signature";
 
 export const components = {
   a: (props) => {
@@ -26,6 +30,19 @@ export const components = {
     return (
       <CustomLink colorScheme={colorScheme} href={props?.url ?? "/"}>
         {props?.children}
+      </CustomLink>
+    );
+  },
+  link: (props) => {
+    const context = useContext(ThemeContext);
+    const colorScheme = context.colorScheme;
+    return (
+      <CustomLink
+        colorScheme={colorScheme}
+        isExternal={props.isExternal}
+        href={props?.url ?? "/"}
+      >
+        {props?.text}
       </CustomLink>
     );
   },
@@ -57,6 +74,15 @@ export const components = {
         )}
       </Container>
     );
+  },
+  ul: (props) => {
+    return <UnorderedList>{props.children}</UnorderedList>;
+  },
+  ol: (props) => {
+    return <OrderedList>{props.children}</OrderedList>;
+  },
+  li: (props) => {
+    return <ListItem>{props.children}</ListItem>;
   },
   h1: (props) => {
     return (
@@ -149,5 +175,8 @@ export const components = {
   },
   grid: (props) => {
     return <CustomGrid {...props} />;
+  },
+  signature: (props) => {
+    return <Signature {...props} />;
   },
 };
