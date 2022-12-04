@@ -22,5 +22,12 @@ Firstly, the only way for me to save a post is to publish it. The moment it is p
 
 <image url="/uploads/radical-honesty.png" caption="This post is not even finished yet, but there it is on the post list." />
 
-Secondly, I will not select a single subject for the site. I will allow myself to publish posts about any topic. The focus of the site is software development, because that's my primary career path, but I will also feature posts from other domains⁠. In my life I have also made a living in theatre, music, video production, and social media management. It is my belief that these domains are of equal importance to software development in&#x20;
+Secondly, I will allow myself to publish posts on any topic. The focus of the site should be software development because that's my primary career path, but I will also feature posts from other domains⁠. In my life I have also made a living in theatre, music, video production, and social media management⁠—these subjects are of equal importance to me as software, and they deserve a place on this site.
 
+Thirdly, I will not limit myself to topics in which I am an expert. For example, I have always dabbled with visual art, but I have never been particularly good at it. However, being terrible at something is the first step towards being kinda good at something. By allowing myself to share the parts of myself that aren't perfect, I am simply painting a richer tapestry of who I really am.
+
+I am hoping that these core tenets will provide me with great opportunity for personal growth. They will ideally help me move past perfectionism, towards a state of constant iteration towards success.&#x20;
+
+For you, the reader, I hope these tenets provide you with a better understanding of who I am. When it comes to the topic of myself, there is no greater expert than me, and if you are going to take anything away from this portfolio, it may as well be the truth.
+
+I like to think that if I were Grandma, I would want to know the truth about my stuffing.
