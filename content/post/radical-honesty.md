@@ -1,5 +1,6 @@
 ---
 title: Reflecting on Radical Honesty
+thumbnail: /uploads/tina.jpeg
 metadata:
   createdAt: '2022-12-04T01:00:00.000Z'
   editedAt: '2022-12-04T01:00:00.000Z'
