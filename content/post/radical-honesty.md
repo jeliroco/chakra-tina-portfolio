@@ -28,7 +28,7 @@ Thirdly, I will not limit myself to topics in which I am an expert. For example,
   src="https://www.youtube.com/embed/Gu8YiTeU9XU"
   description={{
     text: "Yes, I am quoting a cartoon dog in my professional portfolio.",
-    style: { textAlign: { base: "center" } }
+    style: { textAlign: { base: "center" }, padding: { base: "0.5em 0 0 0 " } }
   }}
 />
 
