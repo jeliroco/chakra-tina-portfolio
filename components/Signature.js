@@ -4,7 +4,6 @@ import { cleanupStyle } from "../.tina/cleanupStyle";
 export const Signature = (props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const style = cleanupStyle(props.style);
-  console.log(style);
   return (
     <Icon {...style} viewBox="0 0 200 180.74">
       <path
