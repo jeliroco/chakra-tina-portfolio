@@ -13,9 +13,9 @@ tags:
 
 This is a promotional video that I produced in 2021 for [Upper Canada Playhouse ]()in Morrisburg, Ontario, Canada.&#x20;
 
-This theatre means so much to me. I spent a lot of time backstage there, growing up as the child of an actor and a musician. I eventually worked there as a production intern in the summers during high school and undergrad. Then after graduation I was lucky enough to perform onstage at this theatre, in theatrical productions and concerts.
+This theatre means so much to me. I spent a lot of time backstage there, growing up as the child of an actor and a musician. I eventually worked there as a production intern in the summers during high school and undergrad. Then after graduation I was lucky enough to perform onstage there, in theatrical productions and concerts.
 
-Unfortunately for all of us, the COVID-19 pandemic obliterated the live performance insdustry, and it is still struggling to recover even 3 years after the pandemic began. When Donnie Bowes, the artistic director of UCP, reached out to me in need of a promotional video for a fundraising campaign, I was happy to oblige.
+Unfortunately for all of us, the COVID-19 pandemic obliterated the live performance industry, and it is still struggling to recover even 3 years after the pandemic began. When Donnie Bowes, the artistic director of UCP, reached out to me in need of a promotional video for a fundraising campaign, I was happy to oblige.
 
 So many people wanted to contribute to the video: directors, writers, actors, members of the community, politicians, the list goes on. Because the pandemic was raging, I was not able to travel to all of the participants to record them myself. So instead, I distributed a list of simple instructions for participants to record themselves:
 
@@ -49,3 +49,4 @@ Overall I would say that the video I created was very strong. I was able to succ
     height: { base: "" }
   }}
 />
+
