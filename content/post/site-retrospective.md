@@ -49,4 +49,3 @@ TODO: Add a signature component, I think that would be nice.
   }}
 />
 
-(I did it)
