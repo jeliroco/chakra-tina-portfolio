@@ -10,6 +10,10 @@ tags:
 
 <video src="https://www.youtube.com/embed/uPows5QoTSs" />
 
+## Technologies Used:
+
+* Unity C#
+
 ## Game Overview
 
 SuperGrav is my current solo project. My intent with SuperGrav is to create a 2D simulation of gravity, modeling N-body interactions of planetary bodies. Planetary bodies are referred to in my implementation as a “Matter”. A Matter applies a gravitational force to all nearby Matter, based on their mass. When two Matters collide, the larger Matter consumes the smaller Matter, adding the mass to its own. This typically results in one or two large central bodies, which influence all other Matter in the simulation. When a Matter’s mass reaches zero, the Matter is respawned. &#x20;
