@@ -10,6 +10,10 @@ tags:
 
 <video src="https://www.youtube.com/embed/HuS94ivQRok" />
 
+## Technologies Used:
+
+* Unity C#
+
 ## Game Overview
 
 Hereafter is a 2D game which was developed for the Ottawa Global Game Jam 2018. The theme for the game jam was “transmission”. We had a team of four, and 3 days to complete the project. After considering possible game ideas involving the transmission of signals, or the transmission of an engine, we took the theme in a unique direction: what about transmissions between the mortal and spiritual planes of existence? What about the transmission of a soul to the afterlife?
@@ -43,4 +47,3 @@ There are 6 spirits in the game, each with their own unique dialogue. Since this
 ### Evaluation&#x20;
 
 Overall, I believe that with Hereafter, we succeeded in our goal of creating two distinct  atmospheres using art and music. However, a shortcoming that all team members identified is  the lack of a compelling game mechanic. It would make more sense to call Hereafter a sort of  “experience” rather than a game, for this reason. This lack of mechanical interest is likely due to  the short development schedule. If afforded more time to further design the core gameplay, we  might have chosen to make the game a platformer. What if the game was split into levels, in  which the player had to circumvent obstacles by passing to/from the mortal/spiritual planes? However, having said all of this, I still find Hereafter to be an affecting experience because of  the effort we made to create a dark but whimsical atmosphere.
-
