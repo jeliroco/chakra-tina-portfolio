@@ -3,7 +3,7 @@ title: ' Hereafter: an Atmospheric Mini-Project '
 thumbnail: /uploads/Screenshot 2022-11-20 221319.png
 metadata:
   createdAt: '2022-11-20T05:00:00.000Z'
-  editedAt: '2022-11-20T05:00:00.000Z'
+  editedAt: '2023-01-16T05:00:00.000Z'
 tags:
   - tag: dev
 ---
