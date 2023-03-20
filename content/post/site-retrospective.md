@@ -20,7 +20,11 @@ Chakra UI is a component library for React that provides a set of ready-to-use c
 
 Tina.io uses Git and Markdown to produce a lightweight and flexible CMS. This allows me to throw together content really quickly, and that content will be very accessible later. No coding knowledge is really required to write content for a Tina application. Tina even has a Cloud service that you can use to write content without even needing a Git client.
 
-Chakra UI provides a good number of strong components (but not as many as others such as  Mantine) and a fantastic CSS-in-JS system for styling those components. Using Chakra, I'm able to easily create color schemes and variants for components⁠—
+Chakra UI provides a good number of strong components (but not as many as others such as &#x20;
+
+<link url="https://mantine.dev/" text="Mantine" isExternal={true} />
+
+) and a fantastic CSS-in-JS system for styling those components. Using Chakra, I'm able to easily create color schemes and variants for components⁠—
 whether those components are provided by Chakra or custom-built. I can then provide the user with light & dark mode options, and even a customizable color scheme option. Both of these features are available for you to mess around with in the footer.
 
 The real beauty of this stack is how Chakra and Tina interact. I can define components in Tina's schema, which can have fields that directly connect to Chakra's CSS-in-JS theming solution. Then, using Tina's "rich-text" fields, I can write a bunch of content, and drop custom components wherever I want. As an example, I will drop in the "RandomText" component that I originally built for my "HeroImage" component (as seen on the home page):
