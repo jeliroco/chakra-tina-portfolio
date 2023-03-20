@@ -3,7 +3,7 @@ title: Portfolio - Site Retrospective
 thumbnail: /uploads/PXL_20221120_081653216(1).jpg
 metadata:
   createdAt: '2022-11-20T09:19:00.000Z'
-  editedAt: '2022-11-20T09:19:00.000Z'
+  editedAt: '2023-03-20T09:00:00.000Z'
 tags:
   - tag: dev
 ---
@@ -53,4 +53,3 @@ TODO: Add a signature component, I think that would be nice.
     justifyContent: { base: "" }
   }}
 />
-
