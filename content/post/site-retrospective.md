@@ -14,6 +14,10 @@ It is currently 4:19AM. I have been working tirelessly on this site for the past
 
 <image url="/uploads/Screenshot 2022-11-20 042342.png" caption="^ This is what it looks like when I write content for this site." />
 
+Tina.io is an open-source framework that simplifies the process of building content management systems (CMS). It is built on top of React and offers a flexible data model that makes it easy to manage content from different sources, including local files, databases, and APIs. With Tina.io, I can create dynamic and customizable user interfaces that allow me (or even a non-technical end-user) to edit content directly on the website, making it easy to manage and update content.
+
+Chakra UI is a component library for React that provides a set of ready-to-use components for building responsive and accessible UIs. Chakra UI offers a wide range of pre-built components, including buttons, forms, modal windows, and more. However, the Chakra feature that I am more interested in is the ability to create customizable themes that make it easy to create consistent and visually appealing UIs.
+
 Tina.io uses Git and Markdown to produce a lightweight and flexible CMS. This allows me to throw together content really quickly, and that content will be very accessible later. No coding knowledge is really required to write content for a Tina application. Tina even has a Cloud service that you can use to write content without even needing a Git client.
 
 Chakra UI provides a good number of strong components (but not as many as others such as  Mantine) and a fantastic CSS-in-JS system for styling those components. Using Chakra, I'm able to easily create color schemes and variants for components⁠—
@@ -31,7 +35,9 @@ It is now 4:35AM.
 
 Anyways, as I was saying... Once I have set up the Tina schema and provided the associated components to be displayed, I can use the Tina admin panel to edit any fields I want. The sky's the limit.
 
-This workflow is perfect for component-driven development. Now that I have a solid foundation for my application, I can focus on building components to be used over and over again. I don't even need to use them on this site! Maybe I'll throw them into a bit.dev component library at some point. If I do, I'll have to write a blog about that.
+Integrating Tina and Chakra allows me to focus on creating content and functionality rather than worrying about the user interface. With Chakra UI, I can easily create a consistent and visually appealing UI that is responsive and accessible, while Tina.io provides an easy way to manage and edit content directly on the website.
+
+This workflow is also perfect for component-driven development. Now that I have a solid foundation for my application, I can focus on building components to be used over and over again. I don't even need to use them on this site! Maybe I'll throw them into a bit.dev component library at some point. If I do, I'll have to write a blog about that.
 
 It is 4:49AM, and I am actually going to go to bed. I swear I'm gonna do it.
 
