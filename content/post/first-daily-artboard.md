@@ -8,7 +8,7 @@ tags:
   - tag: art
 ---
 
-So, I bought myself a [Wacom One ](https://www.wacom.com/en-ca/products/pen-displays/wacom-one "Wacom One")drawing pad yesterday for about $350. Couldn't help myself. Had a drawing pad before but it didn't have a screen on it, and I could never get used to not looking at what I was drawing on. Here's what it looks like:
+So, I bought myself a [Wacom One](https://www.wacom.com/en-ca/products/pen-displays/wacom-one "Wacom One") drawing pad yesterday for about $350. Couldn't help myself. Had a drawing pad before but it didn't have a screen on it, and I could never get used to not looking at what I was drawing on. Here's what it looks like:
 
 <image url="/uploads/PXL_20221122_001503627.jpg" caption="Yes, I am a sucker for a vertical screen." />
 
