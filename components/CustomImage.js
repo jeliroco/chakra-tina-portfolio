@@ -2,6 +2,7 @@ import { AspectRatio, Button, Heading, HStack, Text } from "@chakra-ui/react";
 import { cleanupStyle } from "../.tina/cleanupStyle";
 import { CustomLink } from "./CustomLink";
 import { StyleBox } from "./StyleBox";
+import { Image } from '@chakra-ui/react'
 
 export const CustomImage = (props) => {
   const { children, colorScheme, ...rest } = props;
@@ -11,10 +12,10 @@ export const CustomImage = (props) => {
       <StyleBox p={0} mb={3}>
         {props?.aspectRatio && (
           <AspectRatio ratio={props?.aspectRatio}>
-            <img src={props?.url} />
+            <Image src={props?.url} />
           </AspectRatio>
         )}
-        {!props?.aspectRatio && <img src={props?.url} />}
+        {!props?.aspectRatio && <Image src={props?.url} width="100%" />}
       </StyleBox>
       {props?.caption && (
         <Text textAlign={"center"}>
