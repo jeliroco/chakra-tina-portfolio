@@ -7,7 +7,7 @@ import { getHeaderTheme } from "./components/header";
 import { getFooterTheme } from "./components/footer";
 import { getMainTheme } from "./components/main";
 import { getStyleBoxTheme } from "./components/styleBox";
-import { globalTheme } from "./global";
+import { getGlobalTheme } from "./global";
 import { themeColors } from "./color";
 import { getShadows } from "./shadow";
 
@@ -21,7 +21,7 @@ const getTheme = (themeConfig) => {
     config,
     colors: themeColors,
     fonts: {},
-    styles: { global: globalTheme },
+    styles: { global: getGlobalTheme(themeConfig) },
     shadows: getShadows(themeConfig),
     components: {
       Header: getHeaderTheme(themeConfig),

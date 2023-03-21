@@ -59,6 +59,11 @@ export const customTemplates = [
           component: "textarea",
         },
       },
+      {
+        name: "aspectRatio",
+        label: "Aspect Ratio",
+        type: "number",
+      }
     ],
   },
   {

@@ -20,6 +20,7 @@ import { useContext } from "react";
 import { CustomCode } from "./CustomCode";
 import { StyleBox } from "./StyleBox";
 import { CustomVideo } from "./CustomVideo";
+import { CustomImage } from "./CustomImage";
 import { CustomGrid } from "./CustomGrid";
 import { Signature } from "./Signature";
 
@@ -62,18 +63,7 @@ export const components = {
   //   );
   // },
   image: (props) => {
-    return (
-      <Container width="100%" maxWidth="768px" p="6">
-        <StyleBox p={0}>
-          <img src={props?.url} />
-        </StyleBox>
-        {props?.caption && (
-          <Center pt="2">
-            <Text>{props?.caption}</Text>
-          </Center>
-        )}
-      </Container>
-    );
+    return <CustomImage {...props} />;
   },
   ul: (props) => {
     return <UnorderedList>{props.children}</UnorderedList>;

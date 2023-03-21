@@ -10,7 +10,7 @@ tags:
 
 Why lie when you could tell the truth?
 
-Brad Blanton's *Radical Honesty *discusses the merits of telling only the truth⁠—not even white lies⁠—about the world around us. While very ethical in theory, the results of radical honesty can often be negative; there are times when a white lie can protect a person from an uncomfortable truth. We don't need to tell Grandma that her stuffing was better last year.
+Brad Blanton's \*Radical Honesty \*discusses the merits of telling only the truth⁠—not even white lies⁠—about the world around us. While very ethical in theory, the results of radical honesty can often be negative; there are times when a white lie can protect a person from an uncomfortable truth. We don't need to tell Grandma that her stuffing was better last year.
 
 But what happens when we stop telling little white lies about ourselves?&#x20;
 
@@ -18,7 +18,7 @@ It goes without saying that a portfolio website is typically used to "put one's 
 
 Firstly, the only way for me to save a post is to publish it. The moment it is published, it appears in the post list. I will always allow myself to go back and edit posts, but I will not allow myself to delete them.
 
-<image url="/uploads/radical-honesty.png" caption="This post is not even finished yet, but there it is on the post list." />
+<image url="/uploads/radical-honesty.png" caption="This post is not even finished yet, but there it is on the post list." aspectRatio={2} />
 
 Secondly, I will allow myself to publish posts on any topic. The focus of the site should be software development because that's my primary career path, but I will also feature posts from other domains⁠. In my life I have also made a living in theatre, music, video production, and social media management⁠—these subjects are of equal importance to me as software, and they deserve a place on this site.
 
