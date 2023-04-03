@@ -6,9 +6,9 @@ metadata:
 thumbnail: /uploads/sngr-hero.webp
 ---
 
-The following article will outline my experiment with leveraging AI as a developer. If you just want to check out the songwriting application itself, head on over to [sngr.ca](https://sngr.ca "SNGR: Songwriter's Next-Generation Resource")
+The following article will outline my experiment with leveraging AI as a developer. If you just want to check out the songwriting application itself, head on over to [sngr.ca](https://sngr.ca "SNGR: Songwriter's Next-Generation Resource").
 
-<image />
+<image url="/uploads/sngr-hero.webp" />
 
 A few weeks ago, a Twitter trend called [HustleGPT](HustleGPT "https://mashable.com/article/gpt-4-hustlegpt-ai-blueprint-money-making-scheme") caught my eye. Basically, someone told ChatGPT to generate as much money as possible using no manual labor. The AI essentially became his boss, and he just did whatever the AI told him to do. The concept went viral and I'm fairly confident that fellow made a lot of money. But it raised an interesting question for me: how productive could I be as a developer, if I used AI to fulfill every other role in the development lifecycle/ecosystem?
 
