@@ -5,6 +5,7 @@ metadata:
   editedAt: '2023-04-03T04:00:00.000Z'
 thumbnail: /uploads/sngr-hero.webp
 tags:
+  - tag: music
   - tag: dev
 ---
 
