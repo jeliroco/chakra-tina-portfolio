@@ -39,7 +39,7 @@ Once I had a decent website up and running, I decided to start work on the actua
 
 Overall, I am very happy with the resulting app as it is now. The generated lyrics are rudimentary at best, but they offer a songwriter a good starting point.
 
-My AI boss has a lot more ideas in mind for future features and I am excited to continue expanding the app. However, it does cost a fair bit of money to actually keep it running. The AI business plan includes premium accounts, but until those are in place, you could consider [buying me a coffee instead](https://www.buymeacoffee.com/jeliroco "help me keep my projects online"). ♥
+My AI boss has a lot more ideas in mind for future features and I am excited to continue expanding the app. However, unlike the guy who created HustleGPT, it actually costs me a fair bit of money to actually keep my app running. The AI business plan includes premium accounts, but until those are in place, you could consider [buying me a coffee instead](https://www.buymeacoffee.com/jeliroco "help me keep my projects online"). ♥
 
 I'll end by showing off some hot new lyrics from my handmade AI songwriting partner:
 
