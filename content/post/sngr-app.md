@@ -9,7 +9,7 @@ tags:
   - tag: dev
 ---
 
-The following article will outline my experiment with leveraging AI as a developer. If you just want to check out the songwriting application itself, head on over to [sngr.ca](https://sngr.ca "SNGR: Songwriter's Next-Generation Resource").
+*The following article will outline my experiment with leveraging AI as a developer. If you just want to check out the songwriting application itself, head on over to [sngr.ca](https://sngr.ca "SNGR: Songwriter's Next-Generation Resource").*
 
 <image url="/uploads/sngr-hero.webp" />
 
@@ -86,3 +86,4 @@ Ain't no turning back, no turning back \
 Cause this new Artificial Intelligence, it's here to stay.
 
 <signature style={{ height: { base: "100px" }, width: { base: "100px" } }} />
+
