@@ -4,6 +4,8 @@ metadata:
   createdAt: '2023-04-03T04:00:00.000Z'
   editedAt: '2023-04-03T04:00:00.000Z'
 thumbnail: /uploads/sngr-hero.webp
+tags:
+  - tag: dev
 ---
 
 The following article will outline my experiment with leveraging AI as a developer. If you just want to check out the songwriting application itself, head on over to [sngr.ca](https://sngr.ca "SNGR: Songwriter's Next-Generation Resource").
@@ -64,7 +66,6 @@ They know the future far and large\
 Ain't no turning back from the truth\
 That this new AI is here to stay, yes it's here to stay.&#x20;
 
-
 Verse 3: \
 Got my head in the clouds, got my feet in the deep \
 My AI can take me places I've never been before I sleep \
@@ -84,4 +85,3 @@ Ain't no turning back, no turning back \
 Cause this new Artificial Intelligence, it's here to stay.
 
 <signature style={{ height: { base: "100px" }, width: { base: "100px" } }} />
-
