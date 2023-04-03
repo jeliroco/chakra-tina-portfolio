@@ -6,5 +6,6 @@ metadata:
 thumbnail: /uploads/sngr-hero.webp
 ---
 
-<image url="/uploads/sngr-hero.webp" aspectRatio={1} />
+Rise and grind.
 
+A few weeks ago, a Twitter trend called [HustleGPT](HustleGPT "https://mashable.com/article/gpt-4-hustlegpt-ai-blueprint-money-making-scheme")
