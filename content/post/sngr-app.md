@@ -12,7 +12,7 @@ A few weeks ago, a Twitter trend called [HustleGPT](HustleGPT "https://mashable.
 
 I started with some core assumptions:
 
-* I want to act purely as a developer. I don't want to come up with any ideas.
+* I want to act purely as a developer.
 * I want the core feature set of whatever I build to involve the OpenAI API in some way.
 * I want to leverage AI for as many tasks as possible within this&#x20;
 
