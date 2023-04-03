@@ -16,3 +16,7 @@ I started with some core assumptions:
 * I want the core feature set of whatever I build to involve the OpenAI API in some way.
 * I want to leverage AI for as many tasks as possible.
 
+I started by asking ChatGPT for some ideas for ways to leverage the OpenAI API for some novel web application. I stated some of my interests -- music, theatre, video editing -- and told it to give me 10 ideas.
+
+<image url="/uploads/gpt-ideas.png" caption="You can see where this is going." />
+
