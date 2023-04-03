@@ -14,5 +14,5 @@ I started with some core assumptions:
 
 * I want to act purely as a developer.
 * I want the core feature set of whatever I build to involve the OpenAI API in some way.
-* I want to leverage AI for as many tasks as possible within this&#x20;
+* I want to leverage AI for as many tasks as possible.
 
