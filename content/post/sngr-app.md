@@ -32,6 +32,8 @@ I wanted to use Midjourney to generate images for my application, but I didn't e
 
 Once I had a decent website up and running, I decided to start work on the actual core feature: AI-generated lyrics. This turned out to be pretty easy. I created an OpenAI account, where I was granted an API key. I used an Astro API endpoint to query the OpenAI API using a Vercel serverless function. Then, I created a simple form for a user to customize their query a bit.
 
+<image url="/uploads/sngr-write.png" caption="check out the song it generated below." />
+
 Overall, I am very happy with the resulting app as it is now. The generated lyrics are rudimentary at best, but they offer a songwriter a good starting point.
 
 My AI boss has a lot more ideas in mind for future features and I am excited to continue expanding the app. However, it does cost a fair bit of money to actually keep it running. The AI business plan includes premium accounts, but until those are in place, you could consider [buying me a coffee instead](https://www.buymeacoffee.com/jeliroco "help me keep my projects online"). ♥
