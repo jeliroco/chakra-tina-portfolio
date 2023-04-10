@@ -19,9 +19,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export const PostCard = (props) => {
-  const { post, children, ...rest } = props;
+  const { post, children, loadDelay:ld, ...rest } = props;
 
-  const [loadDelay, setLoadDelay] = useState(props?.loadDelay ?? 0);
+  const [loadDelay, setLoadDelay] = useState(ld ?? 0);
 
   const imageRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
