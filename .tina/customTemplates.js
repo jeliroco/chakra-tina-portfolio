@@ -63,7 +63,7 @@ export const customTemplates = [
         name: "aspectRatio",
         label: "Aspect Ratio",
         type: "number",
-      }
+      },
     ],
   },
   {
@@ -153,8 +153,35 @@ export const customTemplates = [
     name: "signature",
     label: "Signature",
     type: "object",
+    fields: [styleField],
+  },
+  {
+    name: "lottie",
+    label: "Lottie",
+    type: "object",
     fields: [
-      styleField,
+      {
+        name: "slug",
+        label: "Slug",
+        type: "string",
+      },
+      {
+        name: "lottieStyle",
+        label: "Style",
+        type: "object",
+        fields: [
+          {
+            name: "height",
+            label: "Height",
+            type: "number",
+          },
+          {
+            name: "width",
+            label: "Width",
+            type: "number",
+          },
+        ],
+      },
     ],
   },
 ];

@@ -23,6 +23,7 @@ import { CustomVideo } from "./CustomVideo";
 import { CustomImage } from "./CustomImage";
 import { CustomGrid } from "./CustomGrid";
 import { Signature } from "./Signature";
+import { LottieAnimation } from "./LottieAnimation";
 
 export const components = {
   a: (props) => {
@@ -169,4 +170,7 @@ export const components = {
   signature: (props) => {
     return <Signature {...props} />;
   },
+  lottie: (props) => {
+    return <LottieAnimation {...props}/>
+  }
 };
