@@ -5,7 +5,9 @@ metadata:
   createdAt: '2023-04-10T04:00:00.000Z'
   editedAt: '2023-04-10T04:00:00.000Z'
 tags:
+  - tag: art
   - tag: dev
+  - tag: video
 ---
 
 I have again found myself burning the midnight oil on a flight of fancy. This time, the object of my hyperfocus is [Lottie](https://airbnb.design/lottie/ "Lottie").
@@ -34,4 +36,3 @@ I'm really happy that I decided to dig into this. It has opened up a world of po
     textAlign: { base: "" }
   }}
 />
-
